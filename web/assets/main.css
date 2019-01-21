@@ -1,0 +1,243 @@
+html{overflow-x: hidden;}
+body {
+    background-image: url('./images/Galbani-Linen-BG.jpg');
+}
+/*HEADER */
+.home-header {
+    height: 85vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center center;
+}
+
+.custom-row-head {
+    height: 85vh;
+}
+
+.custom-title1 {
+    font-size: 60px;
+    line-height: .92em;
+    color: #fff!important;
+    padding-bottom: 20px;
+    font-family: 'neutra-text' !important;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+.custom-title2 {
+    font-family: 'neutra-text' !important;
+    padding: 7px;
+    color: #fff!important;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: 2px solid;
+    border-color: #fff;
+    border-radius: 50px;
+}
+
+.custom-title2:hover {
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.4);
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.custom-header {
+    width: 100vw;
+    height: 15vh;
+    background-color: #E31818 !important;
+}
+
+.custom-navbar-row {
+    height: 15vh;
+    font-size: 1.4em;
+}
+
+.navbar-custom-title {
+    color: #fff !important;
+    margin: 10px;
+}
+
+.navbar-custom-title:hover {
+    color: lightgrey !important;
+}
+
+/* HEADER */
+/*PRODUCTS */
+.custom-desc-parag {
+    color: #676767;
+    font-weight: 400;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-size: 18px;
+    text-align: justify;
+    text-align-last: center;
+    line-height: 2;
+}
+
+.custom-line {
+    height: 1px;
+    border-color: green;
+    background-color: green;
+    width: 150px;
+    font-size: 5em;
+    margin-bottom: 30px;
+}
+
+.custom-product-list {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.custom-product-title {
+    color: #333333;
+    margin-bottom: 50px;
+    font-weight: 400;
+    font-size: 1.9em;
+}
+
+.custom-product-item {
+    margin: 10px;
+    border: 1px solid;
+    border-color: #DDDDDD;
+    background-color: white;
+}
+
+.custom-item-name {
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: #676767;
+    font-weight: 400;
+    font-size: 1.4em;
+}
+
+.custom-procucts-button1 {
+    color: #198557;
+    padding: 10px 20px 10px 20px;
+    font-weight: 500;
+    font-size: 1.1em;
+    border: 2px solid;
+    border-color: #198557;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+.custom-procucts-button1:hover {
+    background-color: rgba(220, 220, 220, 0.6);
+}
+/* PRODUCTS*/
+/* Recipes */
+
+.custom-recipe-list {
+    background-image: url("./images/wood-background.jpg");
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.custom-recipe-parag {
+    color: white;
+    line-height: 2.5;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.custom-recipe-button {
+    margin-top: 30px;
+    border: 2px solid;
+    border-color: white;
+    border-radius: 50px;
+}
+
+.custom-recipe-button:hover {
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.4);
+}
+/* Recipes */
+/* Description */
+.custom-desc-title {
+    color: #333333;
+    padding-bottom: 50px;
+    margin-top: 80px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 2.5em;
+}
+
+.custom-desc1-parag {
+    color: #676767;
+    font-weight: 400;
+    margin-bottom: 80px;
+    font-size: 18px;
+    text-align: justify;
+    text-align-last: center;
+    line-height: 2;
+}
+
+.custom-procucts-button {
+    color: #198557;
+    padding: 10px 20px 10px 20px;
+    font-weight: 500;
+    font-size: 1.1em;
+    border: 2px solid;
+    border-color: #198557;
+    border-radius: 50px;
+    margin-bottom: 100px;
+}
+
+.custom-procucts-button:hover {
+    background-color: rgba(220, 220, 220, 0.6);
+}
+/* Description */
+/* footer */
+.custom-footer-cover {
+    margin-top : 70px;
+    background-image: url('images/Galbani-Landscape-Footer-1600.png') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    width: 100vw;
+    height: 35vh;
+}
+
+.custom-footer-content {
+    background-color: #006B40;
+}
+
+.custom-footer-title {
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin: 20px;
+    text-decoration: underline;
+}
+
+.custom-footer-title a {
+    text-decoration: none;
+    color: white;
+}
+
+.custom-line-white {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-footer-bottom {
+    font-weight: 400;
+    margin: 10px;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.custom-footer-bottom1 {
+    font-weight: 400;
+    font-size: 2em;
+}
+
+.custom-footer-bottom1 a {
+    text-decoration: none;
+    color: white;
+}
+/* footer */

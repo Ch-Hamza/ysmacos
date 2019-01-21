@@ -1,0 +1,29 @@
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface:
+            algorithm:           sha256
+            encode_as_base64:    true
+            iterations:          5000
+
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username
+
+    firewalls:
+        main:
+            pattern: ^/
+            form_login:
+                provider: fos_userbundle
+                csrf_token_generator: security.csrf.token_manager
+                default_target_path: /admin
+                login_path: /admin/login
+                check_path: /admin/login_check
+
+            logout:
+              path: /admin/logout
+              target: /admin/login
+            anonymous:    true
+
+    access_control:
+        - { path: ^/admin/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        #- { path: ^/admin/, role: ROLE_ADMIN }

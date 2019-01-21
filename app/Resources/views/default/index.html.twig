@@ -1,0 +1,136 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="home-header" style="background-image: url('{{ asset('assets/images/Galbani-Home-Header.jpg') }}')">
+        <div class="container">
+            <div class="row align-items-center custom-row-head justify-content-center">
+                <div class="col-12 text-center">
+                    <div class="custom-title1">{{ 'translate.welcome'|trans }}</div>
+                    <a href=""><div class="offset-4 custom-title2 col-4">{{ 'translate.welcome_button'|trans }}</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="custom-header">
+        <div class="container">
+            <div class="row align-items-center justify-content-center custom-navbar-row">
+                <nav class="navbar navbar-expand navbar-dark">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link navbar-custom-title" href="#">{{ 'translate.home'|trans }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link navbar-custom-title" href="#">{{ 'translate.products'|trans }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link navbar-custom-title" href="#">{{ 'translate.recette'|trans }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link navbar-custom-title" href="#">{{ 'translate.contact'|trans }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row custom-desc-parag justify-content-center">
+            <div class="col-7">{{ 'translate.top_descrip'|trans }}</div>
+        </div>
+        <hr class="custom-line">
+        <hr class="custom-line">
+    </div>
+
+    <div class="custom-product-list">
+        <div class="custom-product-title text-center">{{ 'translate.prod_pop'|trans }}</div>
+        <div class="row justify-content-center">
+            {% for p in products %}
+                <div class="col-lg-2 col-sm-5 col-md-3 custom-product-item">
+                    <a href="">
+                        <div><img class="img-fluid" src="{{ vich_uploader_asset(p,'imageFile') }}" alt=""></div>
+                        <div class="text-center custom-item-name">{{ p.name }}</div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="row justify-content-center">
+            <a href="">
+                <div class="custom-procucts-button1">
+                    <span>{{ 'translate.desc_button'|trans }}</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="custom-recipe-list">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="custom-recipe-parag">{{ 'translate.recette_desc'|trans }}</div>
+                    <a href="">
+                        <div class="custom-recipe-button text-center">
+                            <span class="custom-recipe-parag">{{ 'translate.recette_button'|trans }}</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="offset-1 col-7">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            {% for r in recipes %}
+                                <li data-target="#carouselExampleIndicators" data-slide-to="{{ loop.index0 }}" {% if loop.index0==0 %}class="active"{% endif %}></li>
+                            {% endfor %}
+                        </ol>
+                        <div class="carousel-inner">
+                            {% for r in recipes %}
+                                <div class="carousel-item {% if loop.index0==0 %}active{% endif %}">
+                                    <img class="img-fluid d-block w-100" src="{{ vich_uploader_asset(r,'imageFile') }}" alt="First slide" style="height: 550px;">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>{{ r.name }}</h5>
+                                        <div>{{ 'translate.recette_see'|trans }}</div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-center custom-desc-title">{{ 'translate.desc_title'|trans }}</div>
+        <div>
+            <div class="row custom-desc1-parag justify-content-center">
+                <div class="col-7">{{ 'translate.desc_parag'|trans }}</div>
+            </div>
+            <div class="row justify-content-center">
+                <a href="">
+                    <div class="custom-procucts-button">
+                        <span>{{ 'translate.desc_button'|trans }}</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <hr class="custom-line">
+        <hr class="custom-line">
+    </div>
+
+    {% include 'default/footer.html.twig' %}
+
+{% endblock %}

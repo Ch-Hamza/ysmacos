@@ -1,0 +1,22 @@
+admin:
+    resource: "@AdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin
+
+fos_user_security:
+   resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+   prefix:   /admin
+
+recipe:
+    resource: "@RecipeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+product:
+    resource: "@ProductBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

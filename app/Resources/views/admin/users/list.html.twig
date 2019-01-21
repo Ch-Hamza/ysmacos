@@ -1,0 +1,90 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}{{ parent() }} - List Users {% endblock %}
+
+{% block body %}
+
+    {{ parent() }}
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+        <!-- Page header -->
+        <div class="page-header">
+            <div class="page-header-content">
+                <div class="page-title">
+                    <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Administrators</span> - List</h4>
+                </div>
+            </div>
+
+            <div class="breadcrumb-line">
+                <ul class="breadcrumb">
+                    <li><a href="{{ path('index_admin_page') }}"><i class="icon-home2 position-left"></i> Home</a></li>
+                    <li class="active">Administrators</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /page header -->
+
+        <!-- Content area -->
+        <div class="content">
+
+            <!-- Table -->
+            <div class="panel panel-flat">
+                <div class="panel-heading">
+                    <div class="row">
+                        <a href="{{ path('add_user_page') }}" class="btn btn-success"><i class="icon-plus3 position-left"></i>Add Admin</a>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for user in listUsers %}
+                            <tr>
+                                <td>{{ user.username }}</td>
+                                <td>{{ user.email }}</td>
+                                <td>
+                                    {% if user.enabled %}
+                                        <span class="label bg-success-400">Enabled</span>
+                                    {% else %}
+                                        <span class="label bg-danger-400">Disabled</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <ul class="icons-list mt-15">
+                                        <li><a href="{{ path('enable_user_page', {'id': user.id}) }}" dicon-checkmarkata-popup="tooltip" title="Toggle"><i class="icon-checkmark"></i></a></li>
+                                        <li><a href="{{ path('edit_user_page', {'id': user.id}) }}" data-popup="tooltip" title="Edit"><i class="icon-pencil5"></i></a></li>
+                                        <li><a href="{{ path('delete_user_page', {'id': user.id}) }}" data-popup="tooltip" title="Delete"><i class="icon-trash" onclick="return confirm('Are you sure you want to Delete this Administrator?')"></i></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <!-- /table -->
+
+            {{ include('admin/footer.html.twig') }}
+
+        </div>
+        <!-- /content area -->
+    </div>
+    <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+    </div>
+    <!-- /page container -->
+
+{% endblock %}

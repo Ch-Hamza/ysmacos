@@ -1,0 +1,94 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block body %}
+
+    {{  parent() }}
+    <!-- Main content -->
+    <div class="content-wrapper">
+        <!-- Page header -->
+        <div class="page-header">
+            <div class="page-header-content">
+                <div class="page-title">
+                    <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Home</span> - Dashboard</h4>
+                </div>
+            </div>
+
+            <div class="breadcrumb-line">
+                <ul class="breadcrumb">
+                    <li><a href="{{ path('index_admin_page') }}"><i class="icon-home2 position-left"></i> Home</a></li>
+                    <li class="active">Dashboard</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /page header -->
+
+        <!-- Content area -->
+        <div class="content">
+
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-3">
+                    <div class="panel bg-pink-400">
+                        <div class="panel-body">
+                            <div class="col-lg-3" style="margin-top: 13px;"><i class="icon-camera"></i></div>
+                            <div class="col-lg-9">
+                                <h3 class="no-margin">4</h3>
+                                <div class="text-muted text-size-small">Total Museums</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="panel bg-purple-400">
+                        <div class="panel-body">
+                            <div class="col-lg-3" style="margin-top: 13px;"><i class="icon-bell2"></i></div>
+                            <div class="col-lg-9">
+                                <h3 class="no-margin">4</h3>
+                                <div class="text-muted text-size-small">Total Expositions</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="panel bg-teal-400">
+                        <div class="panel-body">
+                            <div class="col-lg-3" style="margin-top: 13px;"><i class="icon-users4"></i></div>
+                            <div class="col-lg-9">
+                                <h3 class="no-margin">4</h3>
+                                <div class="text-muted text-size-small">Total Users</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Basic line chart -->
+                <div class="panel panel-flat">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Application Users Evolution</h5>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="chart-container">
+                            <div class="chart" id="d3-area-basic"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /basic line chart -->
+            </div>
+            {% include 'admin/footer.html.twig' %}
+        </div>
+        <!-- /content area -->
+
+    </div>
+    <!-- /main content -->
+    </div>
+    <!-- /page content -->
+
+    </div>
+    <!-- /page container -->
+
+{% endblock %}
