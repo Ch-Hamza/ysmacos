@@ -122,15 +122,11 @@
                             </li>
 
                             <li>
-                                <a href=""><i class="icon-cart5"></i> <span>Commandes</span></a>
+                                <a href="{{ path('list_commandes_page') }}"><i class="icon-cart5"></i> <span>Commandes</span></a>
                             </li>
 
                             <li>
                                 <a href=""><i class="icon-folder2"></i> <span>Archive</span></a>
-                            </li>
-
-                            <li>
-                                <a href=""><i class=" icon-cash"></i> <span>Bilan</span></a>
                             </li>
 
                             <li {% if app.request.attributes.get('_route') == 'list_users_page' %} class="active"{% endif %}>
