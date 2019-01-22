@@ -2,16 +2,22 @@
 
 namespace ProductBundle\Controller;
 
+use ProductBundle\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class DefaultController extends Controller
 {
     /**
-     * @Route("/prod")
+     * @Route("/products", name="list_products_page")
      */
     public function indexAction()
     {
-        return $this->render('ProductBundle:Default:index.html.twig');
+        $products = $this->getDoctrine()->getManager()->getRepository(Product::class)->findBy(array('enabled' => true));
+        return $this->render('admin/products/list.html.twig', array(
+            'products' => $products,
+        ));
     }
+
+
 }

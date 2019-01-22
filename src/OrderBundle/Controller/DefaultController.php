@@ -3,7 +3,7 @@
 namespace OrderBundle\Controller;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use OrderBundle\Form\FullCommande;
+use OrderBundle\Form\ProductType;
 use OrderBundle\Entity\Commande;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -23,6 +23,17 @@ class DefaultController extends Controller
     }
 
     /**
+     * @Route("/archive", name="list_commandes_archive")
+     */
+    public function archivelistAction()
+    {
+        $commandes = $this->getDoctrine()->getManager()->getRepository(Commande::class)->findBy(array('enabled' => true, 'archived' => true));
+        return $this->render('admin/commandes/list.html.twig', array(
+            'commandes' => $commandes,
+        ));
+    }
+
+    /**
      * @Route("/orders/add", name="add_commande_page")
      */
     public function addAction(Request $request)
@@ -30,7 +41,7 @@ class DefaultController extends Controller
         $commande = new Commande();
         $commande->setEnabled(true);
         $commande->setArchived(false);
-        $form = $this->get('form.factory')->create(FullCommande::class, $commande);
+        $form = $this->get('form.factory')->create(ProductType::class, $commande);
 
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
             $em = $this->getDoctrine()->getManager();
@@ -61,7 +72,7 @@ class DefaultController extends Controller
             $originalItems->add($item);
         }
 
-        $form = $this->createForm(FullCommande::class, $order);
+        $form = $this->createForm(ProductType::class, $order);
         if($request->isMethod('POST') && $form->handleRequest($request)->isValid())
         {
             foreach ($originalItems as $item)

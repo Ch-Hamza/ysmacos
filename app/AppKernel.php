@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new RecipeBundle\RecipeBundle(),
             new AdminBundle\AdminBundle(),
             new OrderBundle\OrderBundle(),
+            new MessageBundle\MessageBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
