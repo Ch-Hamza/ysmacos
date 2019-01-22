@@ -1,0 +1,57 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}{{ parent() }} - Edit Product {% endblock %}
+
+{% block body %}
+
+    {{  parent() }}
+    <div class="content-wrapper">
+        <!-- Page header -->
+        <div class="page-header">
+            <div class="page-header-content">
+                <div class="page-title">
+                    <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Home</span> - Product</h4>
+                </div>
+            </div>
+
+            <div class="breadcrumb-line">
+                <ul class="breadcrumb">
+                    <li><a href="{{ path('index_admin_page') }}"><i class="icon-home2 position-left"></i> Home</a></li>
+                    <li><a href="{{ path('list_products_page') }}">Product</a></li>
+                    <li class="active">Edit Product</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /page header -->
+
+        <!-- Content area -->
+        <div class="content">
+
+            <!-- Horizontal form -->
+            <div class="panel panel-flat">
+                <div class="panel-heading">
+                    <h5 class="panel-title">Edit Product</h5>
+                </div>
+
+                <div class="panel-body">
+                    <div class="container-fluid">
+                        {{ form(form) }}
+                    </div>
+                </div>
+            </div>
+            <!-- /horizotal form -->
+
+            {% include 'admin/footer.html.twig' %}
+
+        </div>
+        <!-- /content area -->
+
+    </div>
+    <!-- /main content -->
+    </div>
+    <!-- /page content -->
+
+    </div>
+    <!-- /page container -->
+
+{% endblock %}

@@ -109,8 +109,8 @@
                                 </a>
                             </li>
 
-                            <li>
-                                <a><i class=" icon-home8"></i> <span>Produits</span></a>
+                            <li {% if app.request.attributes.get('_route') == 'list_products_page' %} class="active"{% endif %}>
+                                <a href="{{ path('list_products_page') }}"><i class=" icon-home8"></i> <span>Produits</span></a>
                             </li>
 
                             <li {% if app.request.attributes.get('_route') == 'list_messages_page' %} class="active"{% endif %}>

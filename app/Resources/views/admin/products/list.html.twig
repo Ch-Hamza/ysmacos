@@ -1,0 +1,80 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}{{ parent() }} - List Users {% endblock %}
+
+{% block body %}
+
+    {{ parent() }}
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+        <!-- Page header -->
+        <div class="page-header">
+            <div class="page-header-content">
+                <div class="page-title">
+                    <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Produits</span> - List</h4>
+                </div>
+            </div>
+
+            <div class="breadcrumb-line">
+                <ul class="breadcrumb">
+                    <li><a href="{{ path('index_admin_page') }}"><i class="icon-home2 position-left"></i> Home</a></li>
+                    <li class="active">Produits</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /page header -->
+
+        <!-- Content area -->
+        <div class="content">
+
+            <!-- Table -->
+            <div class="panel panel-flat">
+                <div class="row" style="margin: 20px">
+                    <a href="{{ path('add_product_page') }}" class="btn btn-success"><i class="icon-plus3 position-left"></i>Ajouter Produit</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Description</th>
+                            <th>Image</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for p in products %}
+                            <tr>
+                                <td>{{ p.name }}</td>
+                                <td style="max-width: 200px !important;word-wrap: break-word;">{{ p.description }}</td>
+                                <td><img src="{{ vich_uploader_asset(p,'imageFile') }}" alt="" style="width: 150px;height: 150px;"></td>
+                                <td>
+                                    <ul class="icons-list mt-15">
+                                        <li><a href="{{ path('edit_products_page', {'id': p.id}) }}" data-popup="tooltip" title="Edit Product"><i class="icon-pencil5"></i></a></li>
+                                        <li><a href="{{ path('delete_product_page', {'id': p.id}) }}" data-popup="tooltip" title="Delete Product" onclick="return confirm('Are you sure you want to Delete this Product?')"><i class="icon-trash"></i></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <!-- /table -->
+
+            {{ include('admin/footer.html.twig') }}
+
+        </div>
+        <!-- /content area -->
+    </div>
+    <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+    </div>
+    <!-- /page container -->
+
+{% endblock %}

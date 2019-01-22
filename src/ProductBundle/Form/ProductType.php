@@ -22,7 +22,6 @@ class ProductType extends AbstractType
                 'download_link'     => false,
                 'required'    => false,
                 'allow_delete' => false,
-                'image_uri' => false,
             ))
             ->add('save',  SubmitType::class)
         ;
