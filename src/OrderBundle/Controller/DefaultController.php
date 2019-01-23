@@ -3,8 +3,8 @@
 namespace OrderBundle\Controller;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use OrderBundle\Form\ProductType;
 use OrderBundle\Entity\Commande;
+use OrderBundle\Form\FullCommande;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -12,18 +12,19 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/orders", name="list_commandes_page")
+     * @Route("/admin/orders", name="list_commandes_page")
      */
     public function indexAction()
     {
-        $commandes = $this->getDoctrine()->getManager()->getRepository(Commande::class)->findBy(array('enabled' => true, 'archived' => false));
+        $commandes = $this->getDoctrine()->getManager()->getRepository(Commande::class)
+            ->findBy(array('enabled' => true, 'archived' => false), array('id' => 'desc'));
         return $this->render('admin/commandes/list.html.twig', array(
             'commandes' => $commandes,
         ));
     }
 
     /**
-     * @Route("/archive", name="list_commandes_archive")
+     * @Route("/admin/archive", name="list_commandes_archive")
      */
     public function archivelistAction()
     {
@@ -34,14 +35,14 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/orders/add", name="add_commande_page")
+     * @Route("/admin/orders/add", name="add_commande_page")
      */
     public function addAction(Request $request)
     {
         $commande = new Commande();
         $commande->setEnabled(true);
         $commande->setArchived(false);
-        $form = $this->get('form.factory')->create(ProductType::class, $commande);
+        $form = $this->get('form.factory')->create(FullCommande::class, $commande);
 
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
             $em = $this->getDoctrine()->getManager();
@@ -59,7 +60,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/orders/edit/{id}", name="edit_orders_page")
+     * @Route("/admin/orders/edit/{id}", name="edit_orders_page")
      */
     public function editAction($id, Request $request)
     {
@@ -72,7 +73,7 @@ class DefaultController extends Controller
             $originalItems->add($item);
         }
 
-        $form = $this->createForm(ProductType::class, $order);
+        $form = $this->createForm(FullCommande::class, $order);
         if($request->isMethod('POST') && $form->handleRequest($request)->isValid())
         {
             foreach ($originalItems as $item)
@@ -94,7 +95,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/orders/enable/{id}", name="enable_orders_page")
+     * @Route("/admin/orders/enable/{id}", name="enable_orders_page")
      */
     public function enableAction($id)
     {
@@ -109,7 +110,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/orders/archive/{id}", name="archive_orders_page")
+     * @Route("/admin/orders/archive/{id}", name="archive_orders_page")
      */
     public function archiveAction($id)
     {

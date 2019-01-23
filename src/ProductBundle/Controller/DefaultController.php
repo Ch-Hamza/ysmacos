@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/products", name="list_products_page")
+     * @Route("/admin/products", name="list_products_page")
      */
     public function indexAction()
     {
@@ -22,7 +22,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/products/add", name="add_product_page")
+     * @Route("/admin/products/add", name="add_product_page")
      */
     public function addAction(Request $request)
     {
@@ -41,7 +41,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/products/edit/{id}", name="edit_products_page")
+     * @Route("/admin/products/edit/{id}", name="edit_products_page")
      */
     public function editAction($id, Request $request)
     {
@@ -60,7 +60,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/products/delete/{id}", name="delete_product_page")
+     * @Route("/admin/products/delete/{id}", name="delete_product_page")
      */
     public function deleteAction($id)
     {

@@ -12,3 +12,7 @@ translate.recette_see: 'انظر الوصفة الكاملة'
 translate.desc_title: 'مكون مع التميز'
 translate.desc_parag: 'كان تفكير إيجيديو جالباني لا يقاوم ، وهذا الشغف نفسه هو دائماً أصل كل شيء نقوم به - من اختيار المكونات عالية الجودة إلى تقديم منتجات جديدة مبتكرة ولذيذة.'
 translate.desc_button: 'جميع المنتجات'
+translate.form_name: Nom
+translate.form_email: Email
+translate.form_message: Message
+translate.form_save : Envoyer

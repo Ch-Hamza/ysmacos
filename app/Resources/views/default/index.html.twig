@@ -6,7 +6,7 @@
             <div class="row align-items-center custom-row-head justify-content-center">
                 <div class="col-12 text-center">
                     <div class="custom-title1">{{ 'translate.welcome'|trans }}</div>
-                    <a href=""><div class="offset-4 custom-title2 col-4">{{ 'translate.welcome_button'|trans }}</div></a>
+                    <a href="{{ path('index_products_page_l') }}"><div class="offset-4 custom-title2 col-4">{{ 'translate.welcome_button'|trans }}</div></a>
                 </div>
             </div>
         </div>
@@ -23,16 +23,16 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link navbar-custom-title" href="#">{{ 'translate.home'|trans }}</a>
+                                <a class="nav-link navbar-custom-title" href="{{ path('index_page') }}">{{ 'translate.home'|trans }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link navbar-custom-title" href="#">{{ 'translate.products'|trans }}</a>
+                                <a class="nav-link navbar-custom-title" href="{{ path('index_products_page_l') }}">{{ 'translate.products'|trans }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link navbar-custom-title" href="#">{{ 'translate.recette'|trans }}</a>
+                                <a class="nav-link navbar-custom-title" href="{{ path('index_recipes_page_l') }}">{{ 'translate.recette'|trans }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link navbar-custom-title" href="#">{{ 'translate.contact'|trans }}</a>
+                                <a class="nav-link navbar-custom-title" href="{{ path('contact_page_l') }}">{{ 'translate.contact'|trans }}</a>
                             </li>
                         </ul>
                     </div>
@@ -54,7 +54,7 @@
         <div class="row justify-content-center">
             {% for p in products %}
                 <div class="col-lg-2 col-sm-5 col-md-3 custom-product-item">
-                    <a href="">
+                    <a href="{{ path('product_details_page_l', {'id': p.id} }}">
                         <div><img class="img-fluid" src="{{ vich_uploader_asset(p,'imageFile') }}" alt=""></div>
                         <div class="text-center custom-item-name">{{ p.name }}</div>
                     </a>
@@ -62,7 +62,7 @@
             {% endfor %}
         </div>
         <div class="row justify-content-center">
-            <a href="">
+            <a href="{{ path('index_products_page_l') }}">
                 <div class="custom-procucts-button1">
                     <span>{{ 'translate.desc_button'|trans }}</span>
                 </div>
@@ -75,7 +75,7 @@
             <div class="row">
                 <div class="col-4">
                     <div class="custom-recipe-parag">{{ 'translate.recette_desc'|trans }}</div>
-                    <a href="">
+                    <a href="{{ path('index_recipes_page_l') }}">
                         <div class="custom-recipe-button text-center">
                             <span class="custom-recipe-parag">{{ 'translate.recette_button'|trans }}</span>
                         </div>
@@ -94,7 +94,7 @@
                                     <img class="img-fluid d-block w-100" src="{{ vich_uploader_asset(r,'imageFile') }}" alt="First slide" style="height: 550px;">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h5>{{ r.name }}</h5>
-                                        <div>{{ 'translate.recette_see'|trans }}</div>
+                                        <div><a href="{{ path('recipe_details_page_l', {'id': r.id}) }}">{{ 'translate.recette_see'|trans }}</a></div>
                                     </div>
                                 </div>
                             {% endfor %}
@@ -120,7 +120,7 @@
                 <div class="col-7">{{ 'translate.desc_parag'|trans }}</div>
             </div>
             <div class="row justify-content-center">
-                <a href="">
+                <a href="{{ path('index_products_page_l') }}">
                     <div class="custom-procucts-button">
                         <span>{{ 'translate.desc_button'|trans }}</span>
                     </div>

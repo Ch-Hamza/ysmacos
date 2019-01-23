@@ -9,7 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/messages", name="list_messages_page")
+     * @Route("/admin/messages", name="list_messages_page")
      */
     public function indexAction()
     {
@@ -20,7 +20,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/messages/delete/{id}", name="delete_message_page")
+     * @Route("/admin/messages/delete/{id}", name="delete_message_page")
      */
     public function deleteAction($id)
     {

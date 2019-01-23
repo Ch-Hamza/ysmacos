@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/recipes", name="list_recipe_page")
+     * @Route("/admin/recipes", name="list_recipe_page")
      */
     public function indexAction()
     {
@@ -22,7 +22,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/recipes/add", name="add_recipe_page")
+     * @Route("/admin/recipes/add", name="add_recipe_page")
      */
     public function addAction(Request $request)
     {
@@ -41,7 +41,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/recipes/edit/{id}", name="edit_recipe_page")
+     * @Route("/admin/recipes/edit/{id}", name="edit_recipe_page")
      */
     public function editAction($id, Request $request)
     {
@@ -60,7 +60,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/recipes/delete/{id}", name="delete_recipe_page")
+     * @Route("/admin/recipes/delete/{id}", name="delete_recipe_page")
      */
     public function deleteAction($id)
     {
