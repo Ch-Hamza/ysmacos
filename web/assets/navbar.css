@@ -1,0 +1,39 @@
+/*.custom-toogle {
+    background-image: url("images/wood-background.jpg");
+}*/
+
+
+.custom-navbar-cover {
+    background-image: url('images/Galbani-Header-Strip-2.png') !important;
+    background-repeat: no-repeat;
+    /*background-size:contain;
+     et sans width*/
+    background-size: cover;
+    background-position:center top;
+    height: 149px;
+    width: 1366px;
+}
+
+.nav-link{
+    color: white;
+    font-size: large;
+    font-weight: normal;
+}
+
+/*@media (max-width: 62em) {
+    .navbar-nav {
+        padding-top: .425rem;
+        padding-left: 0.75rem;
+    }
+    .navbar-nav .nav-item {
+        float: none;
+    }
+
+    .navbar-nav .nav-item {
+        display: block;
+    }
+    .navbar-nav .nav-item + .nav-item {
+        margin-left: 0;
+    }
+
+}*/
