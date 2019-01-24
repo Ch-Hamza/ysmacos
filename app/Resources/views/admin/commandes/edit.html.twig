@@ -1,0 +1,74 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}{{ parent() }} - Edit Musuem {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('admin_assets/js/edit_museum_images.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+    {{  parent() }}
+    <!-- Main content -->
+    <div class="content-wrapper">
+
+        <!-- Content area -->
+        <div class="content">
+
+            <!-- Horizontal form -->
+            <div class="panel panel-flat">
+                <div class="panel-heading">
+                    <h5 class="panel-title">Edit Museum</h5>
+                </div>
+
+                <div class="panel-body">
+                    <div class="container-fluid">
+                        {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+                        {{ form_row(form.orderInfo.customerFirstName) }}
+                        {{ form_row(form.orderInfo.customerLastName) }}
+                        {{ form_row(form.orderInfo.customerCompany) }}
+                        {{ form_row(form.orderInfo.customerEmail) }}
+                        {{ form_row(form.orderInfo.customerPhone) }}
+                        {{ form_row(form.saleDate) }}
+
+                        <ul class="tags list-group" style="padding: 30px;margin: 30px" data-prototype="{{ form_widget(form.items.vars.prototype)|e('html_attr') }}">
+
+                            {% for tag in form.items %}
+                                <li class="list-group-item">
+                                    {{ form_row(tag) }}
+                                </li>
+                                <hr>
+                            {% endfor %}
+                        </ul>
+
+                        <div class="container">
+                            <div class="row">
+                                {{ form_widget(form.save, {'attr': {'class': 'btn bg-teal-300'}}) }}
+                                <a class="btn btn-default" href="{{ path('list_commandes_page') }}">Back</a>
+                            </div>
+                        </div>
+
+                        {{ form_errors(form) }}
+                        {{ form_rest(form) }}
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+            <!-- /horizotal form -->
+
+            {% include 'admin/footer.html.twig' %}
+
+        </div>
+        <!-- /content area -->
+
+    </div>
+    <!-- /main content -->
+    </div>
+    <!-- /page content -->
+
+    </div>
+    <!-- /page container -->
+
+{% endblock %}

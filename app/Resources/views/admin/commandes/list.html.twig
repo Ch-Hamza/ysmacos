@@ -1,0 +1,181 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}{{ parent() }} - List Users {% endblock %}
+
+{% block body %}
+
+    {{ parent() }}
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+        <!-- Page header -->
+        <div class="page-header">
+            <div class="page-header-content">
+                <div class="page-title">
+                    <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Commandes</span> - List</h4>
+                </div>
+            </div>
+
+            <div class="breadcrumb-line">
+                <ul class="breadcrumb">
+                    <li><a href="{{ path('index_admin_page') }}"><i class="icon-home2 position-left"></i> Home</a></li>
+                    <li class="active">Commandes</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /page header -->
+
+        <!-- Content area -->
+        <div class="content">
+            <div class="row" style="margin: 20px">
+                <a href="{{ path('add_commande_page') }}" class="btn btn-success"><i class="icon-plus3 position-left"></i>Ajouter Commande</a>
+            </div>
+            <div class="row">
+                {% set sum1 = 0 %}
+                {% for c in commandes %}
+                <div class="col-md-6">
+                    <div class="panel invoice-grid">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h6 class="text-semibold no-margin-top">{{ c.orderInfo.getCustomerFirstName }} {{ c.orderInfo.getCustomerLastName }}</h6>
+                                    <ul class="list list-unstyled">
+                                        <li>Invoice #: &nbsp;{{ "%04d" | format(c.id) }}</li>
+                                        <li>Issued on: <span class="text-semibold">{{ c.saleDate |date('d/m/Y') }}</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    {% set sum1 = 0 %}
+                                    {% for item in c.items %}
+                                        {% set sum1 = sum1 + item.prixTotal %}
+                                    {% endfor %}
+                                    <h6 class="text-semibold text-right no-margin-top">{{ sum1 }} DT</h6>
+                                    <div class="text-right">
+                                        Status: &nbsp;
+                                        <span class="label bg-warning-300 dropdown-toggle" data-toggle="dropdown">Pending</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-footer">
+                            <ul class="pull-right">
+                                <li><a href="#" data-toggle="modal" data-target="#invoice{{ loop.index0 }}"><i class="icon-eye8"></i></a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu7"></i> <span class="caret"></span></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="{{ path('edit_orders_page', {'id': c.id}) }}"><i class="icon-file-plus"></i> Edit invoice</a></li>
+                                        <li><a href="{{ path('enable_orders_page', {'id': c.id}) }}"><i class="icon-cross2" onclick="return confirm('Are you sure you want to Delete this Invoice?')"></i> Remove invoice</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{{ path('archive_orders_page', {'id': c.id}) }}"><i class="icon-folder-plus2"></i> Archive invoice</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal with invoice -->
+                <div id="invoice{{ loop.index0 }}" class="modal fade">
+                    <div class="modal-dialog modal-full">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h5 class="modal-title">Invoice #: &nbsp;{{ "%04d" | format(c.id) }}</h5>
+                            </div>
+
+                            <div class="panel-body no-padding-bottom">
+                                <div class="row">
+                                    <div class="col-md-offset-6 col-md-6 content-group">
+                                        <div class="invoice-details">
+                                            <h5 class="text-uppercase text-semibold">Invoice #: &nbsp;{{ "%04d" | format(c.id) }}</h5>
+                                            <ul class="list-condensed list-unstyled">
+                                                <li>Date: <span class="text-semibold">{{ c.saleDate |date('d/m/Y') }}</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-9 content-group">
+                                        <span class="text-muted">Invoice To:</span>
+                                        <ul class="list-condensed list-unstyled">
+                                            <li><h5>{{ c.orderInfo.getCustomerFirstName }} {{ c.orderInfo.getCustomerLastName }}</h5></li>
+                                            <li><span class="text-semibold">{{ c.orderInfo.customerCompany }}</span></li>
+                                            <li>{{ c.orderInfo.customerPhone }}</li>
+                                            <li>{{ c.orderInfo.customerEmail }}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-lg">
+                                    <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th class="col-sm-1">Quantity</th>
+                                        <th class="col-sm-1">Total</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for item in c.items %}
+                                        <tr>
+                                            <td>
+                                                <h6 class="no-margin">{{ item.product.name }}</h6>
+                                            </td>
+                                            <td>{{ item.quantity }}</td>
+                                            <td><span class="text-semibold">{{ item.prixTotal }} DT</span></td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="row invoice-payment">
+
+                                    <div class="col-sm-offset-7 col-sm-5">
+                                        <div class="content-group">
+                                            <h6>Total due</h6>
+                                            <div class="table-responsive no-border">
+                                                <table class="table">
+                                                    <tbody>
+                                                    <tr>
+                                                        <th>Total:</th>
+                                                        <td class="text-right text-primary"><h5 class="text-semibold">{{ sum1 }} DT</h5></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /modal with invoice -->
+                {% endfor %}
+            </div>
+
+            {{ include('admin/footer.html.twig') }}
+
+        </div>
+        <!-- /content area -->
+    </div>
+    <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+    </div>
+    <!-- /page container -->
+
+{% endblock %}

@@ -1,7 +1,7 @@
 var $collectionHolder;
 
 // setup an "add a tag" link
-var $addTagLink = $('<a href="#" class="btn btn-default" style="margin: 10px;">Add Image</a>');
+var $addTagLink = $('<a href="#" class="btn btn-default" style="margin: 10px;">Add Item</a>');
 var $newLinkLi = $('<li></li>').append($addTagLink);
 
 jQuery(document).ready(function() {
@@ -50,7 +50,7 @@ function addTagForm($collectionHolder, $newLinkLi) {
     $collectionHolder.data('index', index + 1);
 
     // Display the form in the page in an li, before the "Add a tag" link li
-    var $newFormLi = $('<li class="row"></li>').append(newForm);
+    var $newFormLi = $('<li class="row" style="margin-top: 20px;"></li>').append(newForm);
 
     $newLinkLi.before($newFormLi);
     

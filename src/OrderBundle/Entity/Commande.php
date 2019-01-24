@@ -12,6 +12,11 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Commande
 {
+    public function __construct()
+    {
+        $this->items = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
     /**
      * @var int
      *
@@ -22,25 +27,14 @@ class Commande
     private $id;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="product", type="string", length=255)
+     * @ORM\OneToMany(targetEntity="OrderBundle\Entity\OrderItem", mappedBy="commande", cascade={"persist", "remove"})
      */
-    private $product;
+    private $items;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="quantity", type="integer")
+     * @ORM\OneToOne(targetEntity="OrderBundle\Entity\OrderInfo", cascade={"persist", "remove"})
      */
-    private $quantity;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="price", type="integer")
-     */
-    private $price;
+    private $orderInfo;
 
     /**
      * @var \DateTime
@@ -55,6 +49,12 @@ class Commande
      */
     private $enabled;
 
+    /**
+     * @ORM\Column(type="boolean", length=255, nullable=true)
+     * @var bool
+     */
+    private $archived;
+
 
     /**
      * Get id
@@ -67,94 +67,38 @@ class Commande
     }
 
     /**
-     * Set product
-     *
-     * @param string $product
-     *
-     * @return Commande
+     * @return mixed
      */
-    public function setProduct($product)
+    public function getItems()
     {
-        $this->product = $product;
-
-        return $this;
+        return $this->items;
     }
 
     /**
-     * Get product
-     *
-     * @return string
+     * @param mixed $items
      */
-    public function getProduct()
+    public function setItems($items)
     {
-        return $this->product;
+        $this->items = $items;
     }
 
     /**
-     * Set quantity
-     *
-     * @param integer $quantity
-     *
-     * @return Commande
+     * @return mixed
      */
-    public function setQuantity($quantity)
+    public function getOrderInfo()
     {
-        $this->quantity = $quantity;
-
-        return $this;
+        return $this->orderInfo;
     }
 
     /**
-     * Get quantity
-     *
-     * @return int
+     * @param mixed $orderInfo
      */
-    public function getQuantity()
+    public function setOrderInfo($orderInfo)
     {
-        return $this->quantity;
+        $this->orderInfo = $orderInfo;
     }
 
     /**
-     * Set price
-     *
-     * @param integer $price
-     *
-     * @return Commande
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-
-        return $this;
-    }
-
-    /**
-     * Get price
-     *
-     * @return int
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * Set saleDate
-     *
-     * @param \DateTime $saleDate
-     *
-     * @return Commande
-     */
-    public function setSaleDate($saleDate)
-    {
-        $this->saleDate = $saleDate;
-
-        return $this;
-    }
-
-    /**
-     * Get saleDate
-     *
      * @return \DateTime
      */
     public function getSaleDate()
@@ -163,19 +107,55 @@ class Commande
     }
 
     /**
-     * @return bool
+     * @param \DateTime $saleDate
      */
-    public function isEnabled()
+    public function setSaleDate($saleDate)
+    {
+        $this->saleDate = $saleDate;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEnabled()
     {
         return $this->enabled;
     }
 
     /**
-     * @param bool $enabled
+     * @param mixed $enabled
      */
     public function setEnabled($enabled)
     {
         $this->enabled = $enabled;
+    }
+
+    public function addItem(OrderItem $item)
+    {
+        $item->setCommande($this);
+        $this->items[] = $item;
+        return $this;
+    }
+
+    public function removeItem(OrderItem $item)
+    {
+        return $this->items->removeElement($item);
+    }
+
+    /**
+     * @return bool
+     */
+    public function isArchived()
+    {
+        return $this->archived;
+    }
+
+    /**
+     * @param bool $archived
+     */
+    public function setArchived($archived)
+    {
+        $this->archived = $archived;
     }
 }
 

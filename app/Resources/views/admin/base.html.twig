@@ -109,24 +109,24 @@
                                 </a>
                             </li>
 
-                            <li>
-                                <a><i class=" icon-home8"></i> <span>Produits</span></a>
+                            <li {% if app.request.attributes.get('_route') == 'list_products_page' %} class="active"{% endif %}>
+                                <a href="{{ path('list_products_page') }}"><i class=" icon-home8"></i> <span>Produits</span></a>
                             </li>
 
-                            <li {% if app.request.attributes.get('_route') == 'index_exposition_page' %} class="active"{% endif %}>
-                                <a href=""><i class=" icon-inbox"></i> <span>Mailing List</span></a>
+                            <li {% if app.request.attributes.get('_route') == 'list_recipe_page' %} class="active"{% endif %}>
+                                <a href="{{ path('list_recipe_page') }}"><i class=" icon-home8"></i> <span>Recettes</span></a>
                             </li>
 
-                            <li {% if app.request.attributes.get('_route') == 'index_exposition_page' %} class="active"{% endif %}>
-                                <a href=""><i class=" icon-mail5"></i> <span>Messages</span></a>
+                            <li {% if app.request.attributes.get('_route') == 'list_messages_page' %} class="active"{% endif %}>
+                                <a href="{{ path('list_messages_page') }}"><i class=" icon-mail5"></i> <span>Messages</span></a>
                             </li>
 
-                            <li>
+                            <li {% if app.request.attributes.get('_route') == 'list_commandes_page' %} class="active"{% endif %}>
                                 <a href="{{ path('list_commandes_page') }}"><i class="icon-cart5"></i> <span>Commandes</span></a>
                             </li>
 
-                            <li>
-                                <a href=""><i class="icon-folder2"></i> <span>Archive</span></a>
+                            <li {% if app.request.attributes.get('_route') == 'list_commandes_archive' %} class="active"{% endif %}>
+                                <a href="{{ path('list_commandes_archive') }}"><i class="icon-folder2"></i> <span>Archive</span></a>
                             </li>
 
                             <li {% if app.request.attributes.get('_route') == 'list_users_page' %} class="active"{% endif %}>

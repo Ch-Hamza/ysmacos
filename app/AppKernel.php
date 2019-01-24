@@ -19,12 +19,14 @@ class AppKernel extends Kernel
 
             new Vich\UploaderBundle\VichUploaderBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new FOS\CKEditorBundle\FOSCKEditorBundle(),
 
             new AppBundle\AppBundle(),
             new ProductBundle\ProductBundle(),
             new RecipeBundle\RecipeBundle(),
             new AdminBundle\AdminBundle(),
             new OrderBundle\OrderBundle(),
+            new MessageBundle\MessageBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
