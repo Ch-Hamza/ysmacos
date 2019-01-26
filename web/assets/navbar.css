@@ -28,12 +28,10 @@
     .navbar-nav .nav-item {
         float: none;
     }
-
     .navbar-nav .nav-item {
         display: block;
     }
     .navbar-nav .nav-item + .nav-item {
         margin-left: 0;
     }
-
 }*/

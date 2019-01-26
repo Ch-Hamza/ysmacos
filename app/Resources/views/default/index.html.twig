@@ -1,6 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <div style="position: fixed">
+        <div><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'fr'})) }}"><img src="{{ asset('admin_assets/images/flags/fr.png') }}" alt=""></a></div>
+        <div><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'ar'})) }}"><img src="{{ asset('admin_assets/images/flags/tn.png') }}" alt=""></a></div>
+    </div>
     <div class="home-header" style="background-image: url('{{ asset('assets/images/Galbani-Home-Header.jpg') }}')">
         <div class="container">
             <div class="row align-items-center custom-row-head justify-content-center">
@@ -11,7 +15,6 @@
             </div>
         </div>
     </div>
-
     <div class="custom-header">
         <div class="container">
             <div class="row align-items-center justify-content-center custom-navbar-row">
@@ -35,6 +38,17 @@
                                 <a class="nav-link navbar-custom-title" href="{{ path('contact_page_l') }}">{{ 'translate.contact'|trans }}</a>
                             </li>
                         </ul>
+
+                        {% if cartLogo!=0 %}
+                            <ul class="navbar-nav align-items-center">
+                                <li class="nav-item">
+                                    <a class="nav-link cart-logo" href="{{ path('cart_page') }}">
+                                        <i class="icon-cart5"></i>
+                                        <span class="badge badge-pill badge-dark">{{ cartLogo }}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        {% endif %}
                     </div>
                 </nav>
             </div>
@@ -53,10 +67,15 @@
         <div class="custom-product-title text-center">{{ 'translate.prod_pop'|trans }}</div>
         <div class="row justify-content-center">
             {% for p in products %}
-                <div class="col-lg-2 col-sm-5 col-md-3 custom-product-item">
-                    <a href="{{ path('product_details_page_l', {'id': p.id} }}">
+                <div class="col-lg-3 col-sm-5 col-md-3 custom-product-item">
+                    <a href="{{ path('product_details_page_l', {'id': p.id}) }}">
                         <div><img class="img-fluid" src="{{ vich_uploader_asset(p,'imageFile') }}" alt=""></div>
-                        <div class="text-center custom-item-name">{{ p.name }}</div>
+                        <hr>
+                        {% if app.request.locale == 'ar' %}
+                            <div class="text-center custom-item-name">{{ p.nameAr }}</div>
+                        {% else %}
+                            <div class="text-center custom-item-name">{{ p.name }}</div>
+                        {% endif %}
                     </a>
                 </div>
             {% endfor %}
@@ -93,8 +112,12 @@
                                 <div class="carousel-item {% if loop.index0==0 %}active{% endif %}">
                                     <img class="img-fluid d-block w-100" src="{{ vich_uploader_asset(r,'imageFile') }}" alt="First slide" style="height: 550px;">
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>{{ r.name }}</h5>
-                                        <div><a href="{{ path('recipe_details_page_l', {'id': r.id}) }}">{{ 'translate.recette_see'|trans }}</a></div>
+                                        {% if app.request.locale == 'ar' %}
+                                            <h5 class="custom-recipe-name">{{ r.nameAr }}</h5>
+                                        {% else %}
+                                            <h5 class="custom-recipe-name">{{ r.name }}</h5>
+                                        {% endif %}
+                                        <div class="recipe_carousel_button"><a href="{{ path('recipe_details_page_l', {'id': r.id}) }}" class="custom-recipe-button1">{{ 'translate.recette_see'|trans }}</a></div>
                                     </div>
                                 </div>
                             {% endfor %}

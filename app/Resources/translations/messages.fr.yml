@@ -12,8 +12,42 @@ translate.recette_see: 'Voir la recette complete'
 translate.desc_title: 'Créé Avec Distinction'
 translate.desc_parag: 'La minutie d’Egidio Galbani était irréprochable, et cette même passion est toujours à la base de tout ce que nous faisons - de la sélection des ingrédients de la plus haute qualité à la fourniture de nouveaux produits innovants et délicieux.'
 translate.desc_button: 'Tout Les Produits'
-translate.form_name: اسم
-translate.form_email: البريد الإلكتروني
-translate.form_message: رسالة
-translate.form_save : إرسال
-
+translate.form_name: Nom
+translate.form_email: Email
+translate.form_message: Message
+translate.form_save : Envoyer
+#products page
+translate.product-page-header: Nos fromages
+translate.product-page-header1: Vrai goût italien, mors après mors
+translate.product-page-title: Nos Produits
+#produt details
+translate.description: Description
+translate.quantity: Quantité
+translate.addtocart: Ajouter au panier
+#recipes page
+translate.recipe-page-header: Recettes
+translate.recipe-page-header1: Servez de l'inspiration
+translate.recipe-page-title: Nos Recettes
+# recipe details
+translate.ingredients: Ingrédients
+translate.instructions: Instructions
+#cart page
+translate.lepetitfermier: Le Petit Fermier
+translate.continue_buying: Continuer vos achats
+translate.mycart: Mon Panier
+translate.reference: REF:
+translate.cart_delete: Supprimer
+translate.checkout: check-out
+#checkout
+translate.thanks: Nous vous remercions d'avoir passé votre commande chez nous
+translate.onemorestep: Un pas de plus
+translate.firstname: Prénom
+translate.lastname: Nom
+translate.phone: Téléphone
+translate.company: Entreprise
+#contact
+translate.contactus: Contactez Nous
+translate.customerservice: Service Clients
+translate.ordersupport: Pour toute assistance à propos d'une commande, veuillez indiquer votre numéro de commande et la date à laquelle votre commande a été passée.
+translate.next: Suivant
+translate.previous: Précédent

@@ -34,6 +34,13 @@ class Recipe
     /**
      * @var string
      *
+     * @ORM\Column(name="name_ar", type="string", length=255)
+     */
+    private $name_ar;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="ingredients", type="text")
      */
     private $ingredients;
@@ -41,9 +48,23 @@ class Recipe
     /**
      * @var string
      *
+     * @ORM\Column(name="ingredients_ar", type="text")
+     */
+    private $ingredients_ar;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="directions", type="text")
      */
     private $directions;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="directions_ar", type="text")
+     */
+    private $directions_ar;
 
     /**
      * @ORM\Column(type="boolean", length=255, nullable=true)
@@ -221,5 +242,52 @@ class Recipe
         $this->enabled = $enabled;
     }
 
+    /**
+     * @return string
+     */
+    public function getNameAr()
+    {
+        return $this->name_ar;
+    }
+
+    /**
+     * @param string $name_ar
+     */
+    public function setNameAr($name_ar)
+    {
+        $this->name_ar = $name_ar;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIngredientsAr()
+    {
+        return $this->ingredients_ar;
+    }
+
+    /**
+     * @param mixed $ingredients_ar
+     */
+    public function setIngredientsAr($ingredients_ar)
+    {
+        $this->ingredients_ar = $ingredients_ar;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDirectionsAr()
+    {
+        return $this->directions_ar;
+    }
+
+    /**
+     * @param mixed $directions_ar
+     */
+    public function setDirectionsAr($directions_ar)
+    {
+        $this->directions_ar = $directions_ar;
+    }
 }
 

@@ -38,6 +38,29 @@ body {
     border-radius: 50px;
 }
 
+.custom-title3 {
+    font-size: 60px;
+    line-height: .92em;
+    color: #fff!important;
+    padding-bottom: 20px;
+    font-family: 'neutra-text' !important;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    margin-top: 150px;
+}
+
+.custom-title4 {
+    font-size: 30px;
+    line-height: .92em;
+    color: #fff!important;
+    padding-bottom: 20px;
+    font-family: 'neutra-text' !important;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
 .custom-title2:hover {
     text-decoration: none;
     background-color: rgba(255,255,255,0.4);
@@ -65,6 +88,18 @@ a {
 
 .navbar-custom-title:hover {
     color: lightgrey !important;
+}
+
+.cart-logo {
+    position: fixed;
+    top: 100px;
+    right: 5px;
+    z-index: 3;
+}
+
+.cart-logo i {
+    font-size: 1.5em;
+    color: darkgrey;
 }
 
 /* HEADER */
@@ -108,12 +143,33 @@ a {
     background-color: white;
 }
 
+.custom-product-item1 {
+    margin: 10px;
+    border: 1px solid;
+    border-color: #DDDDDD;
+    background-color: white !important;
+    padding: 0;
+}
+
 .custom-item-name {
     padding-bottom: 10px;
     text-decoration: none;
     color: #676767;
     font-weight: 400;
     font-size: 1.4em;
+}
+
+.custom-item-name1 {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 1.4em;
+}
+
+.custom-item-name:hover, .custom-item-name1:hover  {
+    text-decoration: underline;
 }
 
 .custom-procucts-button1 {
@@ -132,6 +188,36 @@ a {
 }
 /* PRODUCTS*/
 /* Recipes */
+.custom-recipe-name {
+    padding: 100px;
+    background-color: rgba(10,10,0,0.4);
+    margin-bottom: 20px;
+}
+
+.recipe_carousel_button {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.custom-recipe-button1 {
+    border: 2px solid;
+    border-color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 15px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.custom-recipe-button1 a {
+    color: white;
+}
+
+.custom-recipe-button1:hover {
+    background-color: rgba(220, 220, 220, 0.6);
+    color: white;
+}
 
 .custom-recipe-list {
     background-image: url("./images/wood-background.jpg");
@@ -241,3 +327,254 @@ a {
     color: white;
 }
 /* footer */
+/* Products Page */
+.custom-header-products {
+    background-image: url("./images/95011919-web.jpg");
+    height: 60vh;
+    background-size: cover;
+    background-position: center center;
+}
+
+.custom-header-products1 {
+    background-image: url("./images/Galbani-Home-Header.jpg");
+    height: 30vh;
+    background-size: cover;
+    background-position: center center;
+}
+
+.custom-container-products {
+    background: linear-gradient(to bottom,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
+}
+
+.navbar-custom-title-product {
+    color: #fff !important;
+    margin: 10px;
+    font-size: 18px !important;
+    font-weight: 500;
+}
+
+.navbar-custom-title-product:hover {
+    color: lightgrey !important;
+}
+/* Products Page */
+/* product details */
+.custom-product-row {
+    margin-top: 70px;
+}
+
+.product-image {
+    background-color: white;
+    border: 1px solid;
+    border-color: lightgrey;
+}
+
+.product-col {
+    margin-top: 25px;
+}
+
+.product-name {
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.product-description {
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-top: 25px;
+}
+
+.add-button {
+    margin-top: 15px;
+    /*border: 0.5px solid;*/
+    border-color: #676767;
+    border-radius: 10px;
+    width: 192px;
+    font-weight: 500;
+    font-size: 1.1em;
+    border: 2px solid;
+    border-color: #006B40;
+    background-color: #006B40;
+    color: white;
+    padding-left: 10px;
+}
+
+.add-button input {
+    border: none;
+    padding: 10px;
+    color: white;
+}
+
+.add-button input:hover {
+    color: white;
+}
+
+.add-button:hover {
+    background-color: rgba(0, 107, 64, 0.8);
+}
+
+.quantity-product {
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.product-cart-form {
+    margin-top: 10px;
+    width: 192px;
+}
+/* product details */
+/* cart page */
+.head-title {
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.shop-all-title {
+    margin-top: 50px;
+}
+
+.table thead tr th {
+    border: none;
+}
+
+.cart-ref {
+    color: grey;
+    padding-top: 20px;
+}
+
+.cart-grey {
+    color: grey;
+}
+
+.cart-delete {
+    margin-top: 20px;
+}
+
+.cart-delete a {
+    color: black;
+    text-decoration: underline;
+}
+
+.cart-delete a:hover {
+    color: grey;
+}
+
+.cart-first-col {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.cart-row {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.cart-continue a {
+    text-decoration: none;
+    color: seagreen;
+}
+
+.cart-continue a:hover {
+    text-decoration: none;
+    color: lightseagreen;
+}
+
+.cart-img {
+    width: 153px;
+    height: 193px;
+    border: 1px solid;
+    border-color: #ccc;
+    background-color: white;
+}
+
+.cart-img-right {
+    margin-left: 40px;
+}
+
+.cart-container {
+    width: 860px;
+    margin: 0 auto;
+}
+
+.cart-quantity-edit input {
+    width: 70px;
+    float: right;
+    border-radius: 0;
+}
+
+.total-text {
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.total-text1 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.checkout-btn1 {
+    width: 100%;
+}
+
+.checkout-btn1 button {
+    background-color: rgb(0, 107, 64);
+    border: 2px solid;
+    border-color: rgb(0, 107, 64);
+    color: white;
+    border-radius: 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.checkout-btn1 button:hover {
+    background-color: rgba(0, 107, 64, 0.8);
+}
+/* cart page */
+/* contact */
+.contact-text {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 50px;
+}
+
+.contact-title {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.contact-btn {
+    background: transparent;
+    border-radius: 0;
+    text-align: center;
+}
+
+.contact-input {
+    background: transparent;
+    color: #c6c6c6;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #c6c6c6;
+}
+
+.contact-input:focus {
+    box-shadow: none;
+    background: transparent;
+}
+
+.contact-form {
+    margin: 0 45px 45px auto;
+}
+
+.shop-all-text {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 50px;
+}
+
+.checkout-title {
+    font-size: 2em;
+}
+/* contact */

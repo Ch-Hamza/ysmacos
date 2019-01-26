@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include 'default/header.html.twig' %}
+    <div class="container">
+        <div class="row custom-product-row">
+            <div class="offset-1 col-5 product-image">
+                <img class="img-fluid recipe-image" src="{{ vich_uploader_asset(product,'imageFile') }}" alt="">
+            </div>
+            <div class="offset-1 col-5 product-col">
+                {% if app.request.locale == 'ar' %}
+                    <div class="product-name">{{ product.nameAr }}</div>
+                {% else %}
+                    <div class="product-name">{{ product.name }}</div>
+                {% endif %}
+                <div class="product-description">{{ 'translate.description'|trans }}</div>
+                {% if app.request.locale == 'ar' %}
+                    <div>{{ product.descriptionAr }}</div>
+                {% else %}
+                    <div>{{ product.description }}</div>
+                {% endif %}
+                <div class="product-add">
+                    <div class="quantity-product">{{ 'translate.quantity'|trans }}</div>
+                    {{ form_start(cart_form, {'attr': {'class': 'form-horizontal'}}) }}
+                    {{ form_row(cart_form.quantity) }}
+                    <a href="">
+                        <div class="add-button">
+                            <i class="icon-cart"></i>
+                            <input type="submit" value="{{ 'translate.addtocart'|trans }}" class="btn">
+                        </div>
+                    </a>
+                    {{ form_rest(cart_form) }}
+                    {{ form_end(cart_form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'default/footer.html.twig' %}
+{% endblock %}

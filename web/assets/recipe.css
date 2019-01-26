@@ -14,17 +14,26 @@
 
 .recipe-ingredient{
     background-color: white !important;
-    height: 1313px;
-    width: 580px;
-    margin-top: 120px;
-    margin-left: -75px;
+    padding: 15px;
+    line-height: 2;
+    position: relative;
+    top: 50px;
+    right: 50px;
+    z-index: 3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 1359px) {
+    .recipe-ingredient {
+        top: 0px;
+        right: 0px;
+        margin-top: 15px;
+    }
 }
 
 .recipe-button{
     color:#C82829 ;
     font-size: 15px;
-    margin-top: 70px;
-    margin-left: 210px;
     padding: 21px 14px 21px 14px;
     border: 2px #F1F0EE solid;
     border-radius: 0px;
@@ -33,4 +42,3 @@
 h2{
     font-weight: normal;
 }
-

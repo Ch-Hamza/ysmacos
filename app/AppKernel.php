@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Vich\UploaderBundle\VichUploaderBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new FOS\CKEditorBundle\FOSCKEditorBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
 
             new AppBundle\AppBundle(),
             new ProductBundle\ProductBundle(),

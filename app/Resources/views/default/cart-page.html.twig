@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include 'default/header.html.twig' %}
+    <div class="container">
+        <div class="head-title shop-all-title">{{ 'translate.lepetitfermier'|trans }}</div>
+
+        <div class="container cart-container">
+            <div class="row cart-row">
+                <div class="col-3 cart-continue">
+                    <a href="{{ path('index_products_page_l') }}"><i class="icon-arrow-left12"></i>{{ 'translate.continue_buying'|trans }}</a>
+                </div>
+            </div>
+
+            {{ form_start(commande_form) }}
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="cart-first-col">{{ 'translate.mycart'|trans }} ({{ cartLogo }})</th>
+                    <th class="text-right">{{ 'translate.quantity'|trans }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for item in items1 %}
+                        <tr>
+                            <td>
+                                <div class="row align-items-center">
+                                    <div>
+                                        <img class="cart-img" src="{{ vich_uploader_asset(item.product,'imageFile') }}" alt="">
+                                    </div>
+                                    <div class="cart-img-right">
+                                        {% if app.request.locale == 'ar' %}
+                                            <div>{{ item.product.name }}</div>
+                                        {% else %}
+                                            <div>{{ item.product.name }}</div>
+                                        {% endif %}
+                                        <div class="cart-ref">{{ 'translate.reference'|trans }} {{ "%04d"|format(item.product.id) }}</div>
+                                        <div class="cart-delete"><a href="{{ path('delete_cart_item', {'id': item.id}) }}">{{ 'translate.cart_delete'|trans }}</a></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-left cart-quantity-edit">{{ form_widget(commande_form.items[loop.index0].quantity) }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <hr>
+            <div class="row">
+                <div class="offset-6 col-6">
+                    <div class="row justify-content-center">
+                        <div class="btn checkout-btn1">{{ form_widget(commande_form.save, { 'label': 'translate.checkout' }) }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="margin-top: 30px">
+                <div class="alert-danger">{{ form_errors(commande_form) }}</div>
+            </div>
+            {{ form_rest(commande_form) }}
+            {{ form_end(commande_form) }}
+        </div>
+    </div>
+
+    {% include 'default/footer.html.twig' %}
+{% endblock %}

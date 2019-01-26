@@ -12,7 +12,43 @@ translate.recette_see: 'انظر الوصفة الكاملة'
 translate.desc_title: 'مكون مع التميز'
 translate.desc_parag: 'كان تفكير إيجيديو جالباني لا يقاوم ، وهذا الشغف نفسه هو دائماً أصل كل شيء نقوم به - من اختيار المكونات عالية الجودة إلى تقديم منتجات جديدة مبتكرة ولذيذة.'
 translate.desc_button: 'جميع المنتجات'
-translate.form_name: Nom
-translate.form_email: Email
-translate.form_message: Message
-translate.form_save : Envoyer
+translate.form_name: اسم
+translate.form_email: البريد الإلكتروني
+translate.form_message: رسالة
+translate.form_save : إرسال
+#products page
+translate.product-page-header: الأجبان لدينا
+translate.product-page-header1: المذاق الإيطالي الحقيقي
+translate.product-page-title: منتجاتنا
+#produt details
+translate.description: وصف
+translate.quantity: كمية
+translate.addtocart: أضف إلى السلة
+#recipes page
+translate.recipe-page-header: وصفات
+translate.recipe-page-header1: قدم الإلهام
+translate.recipe-page-title: وصفاتنا
+# recipe details
+translate.ingredients: المكونات
+translate.instructions: تعليمات
+#cart page
+translate.lepetitfermier: المزارع الصغير
+translate.continue_buying: مواصلة التسوق
+translate.mycart: سلتي
+translate.reference: :إشارة
+translate.cart_delete: نزع
+translate.checkout: الدفع
+#checkout
+translate.thanks: شكرا لوضع طلبك معنا
+translate.onemorestep: خطوة أخرى
+translate.firstname: الأسم
+translate.lastname: السمعة
+translate.phone: هاتف
+translate.company: مؤسسة
+#contact
+translate.contactus: اتصل بنا
+translate.customerservice: خدمة الزبائن
+translate.ordersupport: للحصول على مساعدة بشأن أحد الطلبات ، يرجى تقديم رقم طلبك وتاريخ تقديم طلبك.
+translate.next: التالي
+translate.previous: السابق
+

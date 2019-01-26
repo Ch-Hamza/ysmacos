@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Form;
+namespace MessageBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -38,6 +38,7 @@ class MessageType extends AbstractType
             ))
             ->add('save',  SubmitType::class, array(
                 'label' => 'translate.form_save',
+                "attr" => array('class' => 'contact-btn'),
             ))
         ;
     }

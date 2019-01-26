@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include 'default/header.html.twig' %}
+
+    <div class="container">
+        <div class="head-title shop-all-title">{{ 'translate.lepetitfermier'|trans }}</div>
+        <div class="checkout-title text-center">{{ 'translate.thanks'|trans }}</div>
+        <div class="shop-all-text">{{ 'translate.onemorestep'|trans }}</div>
+        <div class="row justify-content-center">
+            <div class="col-6 checkout-form">
+                {{ form_start(personalinfo_form) }}
+                <div class="row">
+                    <div class="col-6">
+                        <div>{{ form_widget(personalinfo_form.customerFirstName, { 'attr': {'placeholder': 'translate.firstname', 'class': 'contact-input' } }) }}</div>
+                        <div class="alert-danger">{{ form_errors(personalinfo_form.customerFirstName) }}</div>
+                    </div>
+                    <div class="col-6">
+                        <div>{{ form_widget(personalinfo_form.customerLastName, { 'attr': {'placeholder': 'translate.lastname', 'class': 'contact-input'} }) }}</div>
+                        <div class="alert-danger">{{ form_errors(personalinfo_form.customerLastName) }}</div>
+                    </div>
+                </div>
+
+                <div>{{ form_widget(personalinfo_form.customerEmail, { 'attr': {'placeholder': 'translate.form_email', 'class': 'contact-input'} }) }}</div>
+                <div class="alert-danger">{{ form_errors(personalinfo_form.customerEmail) }}</div>
+
+                <div>{{ form_widget(personalinfo_form.customerPhone, { 'attr': {'placeholder': 'translate.phone', 'class': 'contact-input'} }) }}</div>
+                <div class="alert-danger">{{ form_errors(personalinfo_form.customerPhone) }}</div>
+
+                <div>{{ form_widget(personalinfo_form.customerCompany, { 'attr': {'placeholder': 'translate.company', 'class': 'contact-input'} }) }}</div>
+                <div class="alert-danger">{{ form_errors(personalinfo_form.customerCompany) }}</div>
+
+                <div class="alert-danger">{{ form_errors(personalinfo_form) }}</div>
+
+                <div style="text-align: center;margin-top: 25px;"><input type="submit" class="btn contact-btn" value="{{ 'translate.form_save'|trans }}"></div>
+                {{ form_rest(personalinfo_form) }}
+                {{ form_end(personalinfo_form) }}
+            </div>
+        </div>
+    </div>
+
+    {% include 'default/footer.html.twig' %}
+{% endblock %}

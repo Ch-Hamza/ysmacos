@@ -17,7 +17,9 @@ class ProductType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
+            ->add('name_ar', TextType::class)
             ->add('description', TextareaType::class)
+            ->add('description_ar', TextareaType::class)
             ->add('imageFile', VichImageType::class, array(
                 'download_link'     => false,
                 'required'    => false,

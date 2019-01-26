@@ -17,8 +17,11 @@ class RecipeType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
+            ->add('name_ar', TextType::class)
             ->add('ingredients', CKEditorType::class)
+            ->add('ingredients_ar', CKEditorType::class)
             ->add('directions', CKEditorType::class)
+            ->add('directions_ar', CKEditorType::class)
             ->add('imageFile', VichImageType::class, array(
                 'download_link'     => false,
                 'required'    => false,

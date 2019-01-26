@@ -41,7 +41,7 @@
 <!-- Main navbar -->
 <div class="navbar navbar-inverse">
     <div class="navbar-header">
-        <a href=""><img src="{{ asset('admin_assets/images/logo.png') }}" alt=""></a>
+        <a href=""><img src="" alt=""></a>
 
         <ul class="nav navbar-nav visible-xs-block">
             <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
@@ -57,7 +57,7 @@
             <li class="dropdown dropdown-user">
                 <a class="dropdown-toggle" data-toggle="dropdown">
                     <img src="{{ asset('admin_assets/images/default.png') }}" alt="" style="width: 30px; height: 30px; object-fit: cover;">
-                    <span>{#{{ app.user.username }}#}</span>
+                    <span>{{ app.user.username }}</span>
                     <i class="caret"></i>
                 </a>
 
@@ -85,7 +85,7 @@
                         <div class="media">
                             <a class="media-left"><img src="{{ asset('admin_assets/images/default.png') }}" class="img-circle img-sm" style="object-fit: cover;" alt=""></a>
                             <div class="media-body">
-                                <span class="media-heading text-semibold">{#{{ app.user.username }}#}</span>
+                                <span class="media-heading text-semibold">{{ app.user.username }}</span>
                                 <div class="text-size-mini text-muted">
                                     <i class="icon-pin text-size-small"></i>
                                     Administrator
@@ -114,7 +114,7 @@
                             </li>
 
                             <li {% if app.request.attributes.get('_route') == 'list_recipe_page' %} class="active"{% endif %}>
-                                <a href="{{ path('list_recipe_page') }}"><i class=" icon-home8"></i> <span>Recettes</span></a>
+                                <a href="{{ path('list_recipe_page') }}"><i class="icon-book2"></i> <span>Recettes</span></a>
                             </li>
 
                             <li {% if app.request.attributes.get('_route') == 'list_messages_page' %} class="active"{% endif %}>
@@ -127,6 +127,10 @@
 
                             <li {% if app.request.attributes.get('_route') == 'list_commandes_archive' %} class="active"{% endif %}>
                                 <a href="{{ path('list_commandes_archive') }}"><i class="icon-folder2"></i> <span>Archive</span></a>
+                            </li>
+
+                            <li {% if app.request.attributes.get('_route') == 'list_devis_page' %} class="active"{% endif %}>
+                                <a href="{{ path('list_devis_page') }}"><i class=" icon-cart"></i> <span>Devis</span></a>
                             </li>
 
                             <li {% if app.request.attributes.get('_route') == 'list_users_page' %} class="active"{% endif %}>

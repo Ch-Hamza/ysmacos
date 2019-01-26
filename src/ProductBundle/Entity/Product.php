@@ -34,9 +34,23 @@ class Product
     /**
      * @var string
      *
+     * @ORM\Column(name="name_ar", type="string", length=255)
+     */
+    private $name_ar;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="description", type="text")
      */
     private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description_ar", type="text")
+     */
+    private $description_ar;
 
     /**
      * @ORM\Column(type="boolean", length=255, nullable=true)
@@ -188,6 +202,38 @@ class Product
     public function setEnabled($enabled)
     {
         $this->enabled = $enabled;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNameAr()
+    {
+        return $this->name_ar;
+    }
+
+    /**
+     * @param string $name_ar
+     */
+    public function setNameAr($name_ar)
+    {
+        $this->name_ar = $name_ar;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescriptionAr()
+    {
+        return $this->description_ar;
+    }
+
+    /**
+     * @param mixed $description_ar
+     */
+    public function setDescriptionAr($description_ar)
+    {
+        $this->description_ar = $description_ar;
     }
 }
 
