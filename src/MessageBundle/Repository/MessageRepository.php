@@ -10,4 +10,12 @@ namespace MessageBundle\Repository;
  */
 class MessageRepository extends \Doctrine\ORM\EntityRepository
 {
+    function countMessages(){
+        $qb = $this->_em->createQueryBuilder();
+        $qb->select('count(message)');
+        $qb->from('MessageBundle:Message','message')
+            ->where('message.enabled = true');
+        $count = $qb->getQuery()->getSingleScalarResult();
+        return $count;
+    }
 }

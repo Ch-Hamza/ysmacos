@@ -48,8 +48,8 @@
                         {% for r in recipes %}
                             <tr>
                                 <td>{{ r.name }}</td>
-                                <td style="max-width: 200px !important;word-wrap: break-word;">{{ r.ingredients|raw }}</td>
-                                <td style="max-width: 200px !important;word-wrap: break-word;">{{ r.directions|raw }}</td>
+                                <td style="max-width: 300px !important;word-wrap: break-word;">{{ r.ingredients|raw }}</td>
+                                <td style="max-width: 400px !important;word-wrap: break-word;">{{ r.directions|raw }}</td>
                                 <td><img src="{{ vich_uploader_asset(r,'imageFile') }}" alt="" style="width: 150px;height: 150px;"></td>
                                 <td>
                                     <ul class="icons-list mt-15">

@@ -10,4 +10,15 @@ namespace OrderBundle\Repository;
  */
 class DevisItemRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function countprods()
+    {
+        $qb = $this->createQueryBuilder('devis_item')
+            ->leftJoin('devis_item.product', 'p')
+            ->addSelect('p as prod')
+            ->addSelect('SUM(devis_item.quantity) as total_quantity')
+            ->groupBy('p.name')
+            ->orderBy('total_quantity', 'desc');
+
+        return $qb->getQuery()->getResult();
+    }
 }

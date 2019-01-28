@@ -578,3 +578,18 @@ a {
     font-size: 2em;
 }
 /* contact */
+
+.btn-products {
+    background-color: #32CD32;
+    color: white;
+    padding: 15px;
+    font-weight: 700 !important;
+    border-radius: 50px !important;
+    border: 1px solid;
+    border-color: #32CD32;
+}
+
+.btn-products:hover {
+    background-color: rgba(50,205,50,0.6);
+    cursor: pointer;
+}

@@ -33,7 +33,7 @@
                             {% if cartLogo!=0 %}
                                 <ul class="navbar-nav align-items-center">
                                     <li class="nav-item">
-                                        <a class="nav-link cart-logo" href="{#{{ path('cart_page') }}#}">
+                                        <a class="nav-link cart-logo" href="{{ path('cart_page') }}">
                                             <i class="icon-cart5" style="font-size: 1.5em; color: darkgrey;"></i>
                                             <span class="badge badge-pill badge-dark">{{ cartLogo }}</span>
                                         </a>
@@ -59,7 +59,7 @@
             {% for p in recipes %}
                 <div class="col-lg-3 col-sm-5 col-md-3 custom-product-item1">
                     <a href="{{ path('recipe_details_page_l', {'id': p.id}) }}">
-                        <div><img class="img-fluid" src="{{ vich_uploader_asset(p,'imageFile') }}" alt=""></div>
+                        <div><img class="img-fluid" src="{{ vich_uploader_asset(p,'imageFile') }}" alt="" style=""></div>
                         {% if app.request.locale == 'ar' %}
                             <div class="text-center custom-item-name1">{{ p.nameAr }}</div>
                         {% else %}

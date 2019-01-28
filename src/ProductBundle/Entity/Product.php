@@ -41,6 +41,20 @@ class Product
     /**
      * @var string
      *
+     * @ORM\Column(name="category", type="string", length=255)
+     */
+    private $category;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="category_ar", type="string", length=255)
+     */
+    private $category_ar;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="description", type="text")
      */
     private $description;
@@ -234,6 +248,38 @@ class Product
     public function setDescriptionAr($description_ar)
     {
         $this->description_ar = $description_ar;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param string $category
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCategoryAr()
+    {
+        return $this->category_ar;
+    }
+
+    /**
+     * @param string $category_ar
+     */
+    public function setCategoryAr($category_ar)
+    {
+        $this->category_ar = $category_ar;
     }
 }
 

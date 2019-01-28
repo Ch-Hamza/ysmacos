@@ -10,4 +10,15 @@ namespace OrderBundle\Repository;
  */
 class OrderItemRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function countRevenue()
+    {
+        $qb = $this->createQueryBuilder('order_item')
+            ->leftJoin('order_item.commande', 'c')
+            ->addSelect('SUM(order_item.prix_total) as total_revenue')
+            ->groupBy('order_item.commande')
+            ->where('c.archived = true')
+            ->andWhere('c.enabled = true');
+
+        return $qb->getQuery()->getResult();
+    }
 }

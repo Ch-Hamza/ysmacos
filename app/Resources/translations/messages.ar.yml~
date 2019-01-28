@@ -1,12 +1,50 @@
+translate.welcome: 'مرحبا بك في مائدتنا'
+translate.welcome_button: 'الجبن الأصيل'
 translate.home: إستقبال
 translate.products: المنتجات
 translate.recette: وصفات
 translate.contact: اتصال
-translate.top_descrip: مع الجبن الأصيل المزارع الصغير ، يمكن أن تصبح الوجبة البسيطة ذاكرة لا تُنسى. فرحة مشاركة وجبة لذيذة مع من تحبهم هي واحدة من أعظم متع الحياة. هذا هو السبب في أن الإيطاليين يسميونها دولتشي فيتا-الحياة الحلوة. مصنوعة من الجودة والحب ، ترضي أجباننا رغبتكم في الأذواق الإيطالية الأصيلة.
-translate.prod_pop: المنتجات الشعبية
-translate.recette_desc: الاستعداد لتكونوا سعداء. إنه سهل مع المزارع الصغير. من الأطباق الإيطالية التقليدية إلى الأطباق السريعة المفضلة اليوم ، نقدم وصفات مغرية لكل يوم وفي كل مناسبة.
-translate.recette_button: كل الوصفات
-translate.recette_see: انظر الوصفة الكاملة
-translate.desc_title: مكون مع التميز
-translate.desc_parag: كان تفكير إيجيديو جالباني لا يقاوم ، وهذا الشغف نفسه هو دائماً أصل كل شيء نقوم به - من اختيار المكونات عالية الجودة إلى تقديم منتجات جديدة مبتكرة ولذيذة.
-translate.desc_button: جميع المنتجات
+translate.top_descrip: 'مع الجبن الأصيل المزارع الصغير ، يمكن أن تصبح الوجبة البسيطة ذاكرة لا تُنسى. فرحة مشاركة وجبة لذيذة مع من تحبهم هي واحدة من أعظم متع الحياة. هذا هو السبب في أن الإيطاليين يسميونها دولتشي فيتا-الحياة الحلوة. مصنوعة من الجودة والحب ، ترضي أجباننا رغبتكم في الأذواق الإيطالية الأصيلة.'
+translate.prod_pop: 'المنتجات الشعبية'
+translate.recette_desc: 'الاستعداد لتكونوا سعداء. إنه سهل مع المزارع الصغير. من الأطباق الإيطالية التقليدية إلى الأطباق السريعة المفضلة اليوم ، نقدم وصفات مغرية لكل يوم وفي كل مناسبة.'
+translate.recette_button: 'كل الوصفات'
+translate.recette_see: 'انظر الوصفة الكاملة'
+translate.desc_title: 'مكون مع التميز'
+translate.desc_parag: 'كان تفكير إيجيديو جالباني لا يقاوم ، وهذا الشغف نفسه هو دائماً أصل كل شيء نقوم به - من اختيار المكونات عالية الجودة إلى تقديم منتجات جديدة مبتكرة ولذيذة.'
+translate.desc_button: 'جميع المنتجات'
+translate.form_name: اسم
+translate.form_email: 'البريد الإلكتروني'
+translate.form_message: رسالة
+translate.form_save: إرسال
+translate.product-page-header: 'الأجبان لدينا'
+translate.product-page-header1: 'المذاق الإيطالي الحقيقي'
+translate.product-page-title: منتجاتنا
+translate.product_cat_all: 'جميع المنتجات'
+translate.moz: موزاريلا
+translate.fb: 'الجبن الأبيض'
+translate.gouta: قوتة
+translate.description: وصف
+translate.quantity: كمية
+translate.addtocart: 'أضف إلى السلة'
+translate.recipe-page-header: وصفات
+translate.recipe-page-header1: 'قدم الإلهام'
+translate.recipe-page-title: وصفاتنا
+translate.ingredients: المكونات
+translate.instructions: تعليمات
+translate.lepetitfermier: 'المزارع الصغير'
+translate.continue_buying: 'مواصلة التسوق'
+translate.mycart: سلتي
+translate.reference: ':إشارة'
+translate.cart_delete: نزع
+translate.checkout: الدفع
+translate.thanks: 'شكرا لوضع طلبك معنا'
+translate.onemorestep: 'خطوة أخرى'
+translate.firstname: الأسم
+translate.lastname: السمعة
+translate.phone: هاتف
+translate.company: مؤسسة
+translate.contactus: 'اتصل بنا'
+translate.customerservice: 'خدمة الزبائن'
+translate.ordersupport: 'للحصول على مساعدة بشأن أحد الطلبات ، يرجى تقديم رقم طلبك وتاريخ تقديم طلبك.'
+translate.next: التالي
+translate.previous: السابق

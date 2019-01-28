@@ -33,7 +33,7 @@
                             {% if cartLogo!=0 %}
                                 <ul class="navbar-nav align-items-center">
                                     <li class="nav-item">
-                                        <a class="nav-link cart-logo" href="{#{{ path('cart_page') }}#}">
+                                        <a class="nav-link cart-logo" href="{{ path('cart_page') }}">
                                             <i class="icon-cart5" style="font-size: 1.5em; color: darkgrey;"></i>
                                             <span class="badge badge-pill badge-dark">{{ cartLogo }}</span>
                                         </a>
@@ -55,9 +55,23 @@
 
     <div class="custom-product-list">
         <div class="custom-product-title text-center">{{ 'translate.product-page-title'|trans }}</div>
+        <div class="row justify-content-center" style="margin-bottom: 50px;">
+            <div class="col-lg-2 col-md-4" style="margin: 10px;">
+                <div class="btn-products category text-center">{{ 'translate.product-cat'|trans }}</div>
+            </div>
+            <div class="col-lg-2 col-md-4" style="margin: 10px;">
+                <div class="btn-products category text-center">{{ 'translate.moz'|trans }}</div>
+            </div>
+            <div class="col-lg-2 col-md-4" style="margin: 10px;">
+                <div class="btn-products category text-center">{{ 'translate.fb'|trans }}</div>
+            </div>
+            <div class="col-lg-2 col-md-4" style="margin: 10px;">
+                <div class="btn-products category text-center">{{ 'translate.gouta'|trans }}</div>
+            </div>
+        </div>
         <div class="row justify-content-center">
             {% for p in products %}
-                <div class="col-lg-3 col-sm-5 col-md-3 custom-product-item">
+                <div class="col-lg-3 col-sm-5 col-md-3 custom-product-item" {% if app.request.locale == 'ar' %}data_category="{{ p.categoryAr }}{% else %}data_category="{{ p.category }}{% endif %}">
                     <a href="{{ path('product_details_page_l', {'id': p.id}) }}">
                         <div><img class="img-fluid" src="{{ vich_uploader_asset(p,'imageFile') }}" alt=""></div>
                         <hr>
@@ -71,6 +85,35 @@
             {% endfor %}
         </div>
     </div>
-
     {% include 'default/footer.html.twig' %}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function () {
+            $('.category').on('click', function (e) {
+
+                var clicked_cat = $(e.target).text();
+                var products = $('.custom-product-item');
+                if(clicked_cat === 'Tout les Produits' || clicked_cat === 'جميع المنتجات')
+                {
+                    $.each(products, function (key, value) {
+                        $(value).show();
+                    });
+                }
+                else {
+                    $.each(products, function (key, value) {
+                        var product_cat = $(value).attr('data_category');
+                        var clicked_cat = $(e.target).text();
+                        if(product_cat === clicked_cat) {
+                            $(value).show();
+                        }
+                        else {
+                            $(value).hide();
+                        }
+                    });
+                }
+            })
+        });
+    </script>
 {% endblock %}

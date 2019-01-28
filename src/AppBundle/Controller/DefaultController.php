@@ -112,7 +112,7 @@ class DefaultController extends Controller
             }
             else{
                 $commande = new Devis();
-                $commande->setEnabled(true);
+                $commande->setEnabled(false);
                 $commande->setSaleDate(new \DateTime());
                 $em->persist($commande);
                 $em->flush();
@@ -274,6 +274,7 @@ class DefaultController extends Controller
                 $personalinfo_form = $this->get('form.factory')->create(PersonalInfoType::class, $personal_info);
             }
             if ($request->isMethod('POST') && $personalinfo_form->handleRequest($request)->isValid()) {
+                $database_commande->setEnabled(true);
                 $em = $this->getDoctrine()->getManager();
                 $em->flush();
                 return $this->redirectToRoute('index_page');

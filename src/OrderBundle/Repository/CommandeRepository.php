@@ -10,4 +10,13 @@ namespace OrderBundle\Repository;
  */
 class CommandeRepository extends \Doctrine\ORM\EntityRepository
 {
+    function countOrders(){
+        $qb = $this->_em->createQueryBuilder();
+        $qb->select('count(commande)');
+        $qb->from('OrderBundle:Commande','commande')
+            ->where('commande.enabled = true')
+            ->andWhere('commande.archived = false');
+        $count = $qb->getQuery()->getSingleScalarResult();
+        return $count;
+    }
 }

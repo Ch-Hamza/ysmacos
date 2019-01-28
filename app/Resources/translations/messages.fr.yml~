@@ -1,25 +1,51 @@
+translate.welcome: 'Bienvenue à Notre Table'
+translate.welcome_button: 'Nos Fromages Authentiques'
 translate.home: Home
 translate.products: Produits
 translate.recette: Recettes
 translate.contact: Contact
-translate.top_descrip: Avec notre authentique fromage le petit fermier, un simple repas peut devenir un souvenir impérissable.
-                       La joie de partager un repas savoureux avec ceux que vous aimez est l’un des plus grands plaisirs de la vie.
-                       C’est la raison pour laquelle les Italiens l’appellent la dolce vita—la douce vie.
-                       Fabriqué avec qualité et amour,
-                       nos fromages satisfont votre envie de goûts italiens authentiques.
-translate.prod_pop: Produits Populaires
-translate.recette_desc: Préparez-vous à être ravi.
-                        C’est facile avec le Petit Fermier.
-                        Des plats italiens traditionnels aux plats
-                        rapides préférés d’aujourd’hui,
-                        nous proposons des recettes alléchantes
-                        pour tous les jours et pour toutes les occasions.
-translate.recette_button: Toutes les recettes
-translate.recette_see: Voir la recette complete
-translate.desc_title: Créé Avec Distinction
-translate.desc_parag: La minutie d’Egidio Galbani était irréprochable,
-                      et cette même passion est toujours à la base de
-                      tout ce que nous faisons - de la sélection des
-                      ingrédients de la plus haute qualité à la fourniture
-                      de nouveaux produits innovants et délicieux.
-translate.desc_button: Tout Les Produits
+translate.top_descrip: 'Avec notre authentique fromage le petit fermier, un simple repas peut devenir un souvenir impérissable. La joie de partager un repas savoureux avec ceux que vous aimez est l’un des plus grands plaisirs de la vie. C’est la raison pour laquelle les Italiens l’appellent la dolce vita—la douce vie. Fabriqué avec qualité et amour, nos fromages satisfont votre envie de goûts italiens authentiques.'
+translate.prod_pop: 'Produits Populaires'
+translate.recette_desc: 'Préparez-vous à être ravi. C’est facile avec le Petit Fermier. Des plats italiens traditionnels aux plats rapides préférés d’aujourd’hui, nous proposons des recettes alléchantes pour tous les jours et pour toutes les occasions.'
+translate.recette_button: 'Toutes les recettes'
+translate.recette_see: 'Voir la recette complete'
+translate.desc_title: 'Créé Avec Distinction'
+translate.desc_parag: 'La minutie d’Egidio Galbani était irréprochable, et cette même passion est toujours à la base de tout ce que nous faisons - de la sélection des ingrédients de la plus haute qualité à la fourniture de nouveaux produits innovants et délicieux.'
+translate.desc_button: 'Tout Les Produits'
+translate.form_name: Nom
+translate.form_email: Email
+translate.form_message: Message
+translate.form_save: Envoyer
+translate.product-page-header: 'Nos fromages'
+translate.product-page-header1: 'Vrai goût italien, mors après mors'
+translate.product-page-title: 'Nos Produits'
+translate.product-cat: 'Tout les Produits'
+translate.product_cat_all: 'Tout les Produits'
+translate.moz: Mozzarella
+translate.fb: 'Fromage blanc'
+translate.gouta: Goûta
+translate.description: Description
+translate.quantity: Quantité
+translate.addtocart: 'Ajouter au panier'
+translate.recipe-page-header: Recettes
+translate.recipe-page-header1: 'Servez de l''inspiration'
+translate.recipe-page-title: 'Nos Recettes'
+translate.ingredients: Ingrédients
+translate.instructions: Instructions
+translate.lepetitfermier: 'Le Petit Fermier'
+translate.continue_buying: 'Continuer vos achats'
+translate.mycart: 'Mon Panier'
+translate.reference: 'REF:'
+translate.cart_delete: Supprimer
+translate.checkout: check-out
+translate.thanks: 'Nous vous remercions d''avoir passé votre commande chez nous'
+translate.onemorestep: 'Un pas de plus'
+translate.firstname: Prénom
+translate.lastname: Nom
+translate.phone: Téléphone
+translate.company: Entreprise
+translate.contactus: 'Contactez Nous'
+translate.customerservice: 'Service Clients'
+translate.ordersupport: 'Pour toute assistance à propos d''une commande, veuillez indiquer votre numéro de commande et la date à laquelle votre commande a été passée.'
+translate.next: Suivant
+translate.previous: Précédent

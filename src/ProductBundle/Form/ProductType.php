@@ -4,6 +4,7 @@ namespace ProductBundle\Form;
 
 use ProductBundle\Entity\Product;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -18,6 +19,22 @@ class ProductType extends AbstractType
         $builder
             ->add('name', TextType::class)
             ->add('name_ar', TextType::class)
+            ->add('category', ChoiceType::class, array(
+                'choices' => array(
+                    'Mozzarella' => 'Mozzarella',
+                    'Fromage blanc' => 'Fromage blanc',
+                    'Gouta' => 'Gouta',
+                ),
+                'placeholder' => 'Select',
+            ))
+            ->add('categoryAr', ChoiceType::class, array(
+                'choices' => array(
+                    'موزاريلا' => 'موزاريلا',
+                    'الجبن الأبيض' => 'الجبن الأبيض',
+                    'قوتة' => 'قوتة',
+                ),
+                'placeholder' => 'Select',
+            ))
             ->add('description', TextareaType::class)
             ->add('description_ar', TextareaType::class)
             ->add('imageFile', VichImageType::class, array(

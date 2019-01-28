@@ -24,63 +24,66 @@
 
         <!-- Content area -->
         <div class="content">
-
             <div class="row">
-                <div class="col-lg-offset-1 col-lg-3">
+                <div class="col-lg-4">
                     <div class="panel bg-pink-400">
                         <div class="panel-body">
-                            <div class="col-lg-3" style="margin-top: 13px;"><i class="icon-camera"></i></div>
+                            <div class="col-lg-3" style="margin-top: 13px;"><i class="icon-archive"></i></div>
                             <div class="col-lg-9">
-                                <h3 class="no-margin">4</h3>
-                                <div class="text-muted text-size-small">Total Devis</div>
+                                <h3 class="no-margin">{{ count_orders }}</h3>
+                                <div class="text-muted text-size-small">Commandes non archivées</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="panel bg-purple-400">
                         <div class="panel-body">
-                            <div class="col-lg-3" style="margin-top: 13px;"><i class="icon-bell2"></i></div>
+                            <div class="col-lg-3" style="margin-top: 13px;"><i class="icon-envelop2"></i></div>
                             <div class="col-lg-9">
-                                <h3 class="no-margin">4</h3>
-                                <div class="text-muted text-size-small">Total Commandes non livrés</div>
+                                <h3 class="no-margin">{{ count_messages }}</h3>
+                                <div class="text-muted text-size-small">Nombre de messages</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="panel bg-teal-400">
                         <div class="panel-body">
                             <div class="col-lg-3" style="margin-top: 13px;"><i class="icon-users4"></i></div>
                             <div class="col-lg-9">
-                                <h3 class="no-margin">4</h3>
-                                <div class="text-muted text-size-small">Total Client</div>
+                                {% set rev = 0 %}
+                                {% for i in revenue %}
+                                    {% set rev = rev + i['total_revenue'] %}
+                                {% endfor %}
+                                <h3 class="no-margin">{{ rev }} DT</h3>
+                                <div class="text-muted text-size-small">Revenu des commandes livrées</div>
                             </div>
 
                         </div>
                     </div>
                 </div>
             </div>
-
-            {#
+            <hr>
+            <h2>Produits les plus demandés</h2>
             <div class="row">
-                <!-- Basic line chart -->
-                <div class="panel panel-flat">
-                    <div class="panel-heading">
-                        <h5 class="panel-title">Application Users Evolution</h5>
-                    </div>
-
-                    <div class="panel-body">
-                        <div class="chart-container">
-                            <div class="chart" id="d3-area-basic"></div>
+                {% for prod in list %}
+                    <div class="col-lg-4">
+                        <div class="panel bg-green-400">
+                            <div class="panel-body">
+                                <div class="col-lg-3" style="margin-top: 13px;"><i class="icon-cart2"></i></div>
+                                <div class="col-lg-9">
+                                    <h3 class="no-margin">Produit: {{ prod[0].product.name }}</h3>
+                                    <div class="text-muted text-size-small">Nombre de demande devis: {{ prod['total_quantity'] }}</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- /basic line chart -->
+                {% endfor %}
             </div>
-            #}
+
             {% include 'admin/footer.html.twig' %}
         </div>
         <!-- /content area -->
