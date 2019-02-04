@@ -107,7 +107,7 @@ a {
 .custom-desc-parag {
     color: #676767;
     font-weight: 400;
-    margin-top: 80px;
+    margin-top: 50px;
     margin-bottom: 80px;
     font-size: 18px;
     text-align: justify;
@@ -592,4 +592,35 @@ a {
 .btn-products:hover {
     background-color: rgba(50,205,50,0.6);
     cursor: pointer;
+}
+
+.waggle {
+    animation: waggle 1s 3s forwards ease-out;
+}
+
+@keyframes waggle {
+    0% {
+        transform: none;
+    }
+    50% {
+        transform: rotateZ(-20deg) scale(1.2);
+    }
+    60% {
+        transform: rotateZ(25deg) scale(1.2);
+    }
+    67.5% {
+        transform: rotateZ(-15deg) scale(1.2);
+    }
+    75% {
+        transform: rotateZ(15deg) scale(1.2);
+    }
+    82.5% {
+        transform: rotateZ(-12deg) scale(1.2);
+    }
+    85% {
+        transform: rotateZ(0) scale(1.2);
+    }
+    100% {
+        transform: rotateZ(0) scale(1);
+    }
 }

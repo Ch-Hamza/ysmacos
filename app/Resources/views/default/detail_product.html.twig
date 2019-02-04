@@ -3,6 +3,9 @@
 {% block body %}
     {% include 'default/header.html.twig' %}
     <div class="container">
+        <div class="row justify-content-center" style="margin-top: 50px;">
+            <img class="waggle" src="{{ asset('assets/images/quality2.png') }}" alt="" style="width: 200px;height: 200px;">
+        </div>
         <div class="row custom-product-row">
             <div class="offset-1 col-5 product-image">
                 <img class="img-fluid recipe-image" src="{{ vich_uploader_asset(product,'imageFile') }}" alt="">
