@@ -2,21 +2,40 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Le Petit Fermier{% endblock %}</title>
+        <title>{% block title %}Brands{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-            <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-            <link href="{{ asset('admin_assets/css/icons/icomoon/styles.css') }}" rel="stylesheet" type="text/css">
-            <link rel="stylesheet" href="{{ asset('assets/main.css') }}">
+            <link href="{{ asset('assets/plugins/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('assets/plugins/owl-carousel/owl.carousel.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('assets/plugins/owl-carousel/owl.theme.default.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('assets/plugins/magnific-popup/magnific-popup.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet">
+            <!-- Fonts/Icons -->
+            <link href="{{ asset('assets/plugins/font-awesome/css/all.css') }}" rel="stylesheet">
+            <link href="{{ asset('assets/plugins/themify/themify-icons.min.css') }}" rel="stylesheet">
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body>
+    <body data-preloader="2">
         {% block body %}{% endblock %}
         {% block javascripts %}
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+            <script src="{{ asset('assets/plugins/jquery.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/bootstrap/popper.min.js') }}"></script>
+            <!-- Plugins -->
+            <script src="{{ asset('assets/plugins/bootstrap/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/appear.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/easing.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/retina.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/countdown.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/imagesloaded.pkgd.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/isotope.pkgd.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/jarallax/jarallax.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/jarallax/jarallax-video.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/magnific-popup/magnific-popup.min.js') }}"></script>
+            <script src="{{ asset('assets/plugins/owl-carousel/owl.carousel.min.js') }}"></script>
+            <script src="http://maps.google.com/maps/api/js?key=AIzaSyDCOgtrXxCRLynF9eWFMdHmcxgEBg4y8Gg"></script>
+            <script src="../assets/plugins/gmaps.min.js{{ asset('assets/plugins/gmaps.min.js') }}"></script>
+
+            <script src="{{ asset('assets/js/functions.min.js') }}"></script>
         {% endblock %}
     </body>
 </html>

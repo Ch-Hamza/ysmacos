@@ -2,12 +2,9 @@
 
 namespace OrderBundle\Form;
 
-use CommandeBundle\Entity\CommandeItem;
 use OrderBundle\Entity\DevisItem;
-use OrderBundle\Entity\OrderItem;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -17,7 +14,7 @@ class CommandeItemEditTypeClient extends AbstractType
     {
         $builder
             ->add('quantity', IntegerType::class, array(
-                'attr' =>  array('min' => 1, 'class' => 'product-cart-form'),
+                'attr' =>  array('min' => 1),
                 'label' => false,
             ))
         ;

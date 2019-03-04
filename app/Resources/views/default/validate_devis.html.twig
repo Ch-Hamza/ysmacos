@@ -2,41 +2,82 @@
 
 {% block body %}
     {% include 'default/header.html.twig' %}
+    {% embed 'default/page-header.html.twig' %}
+        {% block page_title %}Checkout{% endblock %}
+        {% block page_title1 %}Checkout{% endblock %}
+    {% endembed %}
 
-    <div class="container">
-        <div class="head-title shop-all-title">{{ 'translate.lepetitfermier'|trans }}</div>
-        <div class="checkout-title text-center">{{ 'translate.thanks'|trans }}</div>
-        <div class="shop-all-text">{{ 'translate.onemorestep'|trans }}</div>
-        <div class="row justify-content-center">
-            <div class="col-6 checkout-form">
-                {{ form_start(personalinfo_form) }}
-                <div class="row">
-                    <div class="col-6">
-                        <div>{{ form_widget(personalinfo_form.customerFirstName, { 'attr': {'placeholder': 'translate.firstname', 'class': 'contact-input' } }) }}</div>
-                        <div class="alert-danger">{{ form_errors(personalinfo_form.customerFirstName) }}</div>
-                    </div>
-                    <div class="col-6">
-                        <div>{{ form_widget(personalinfo_form.customerLastName, { 'attr': {'placeholder': 'translate.lastname', 'class': 'contact-input'} }) }}</div>
-                        <div class="alert-danger">{{ form_errors(personalinfo_form.customerLastName) }}</div>
-                    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <!-- Billing details -->
+                    <h4 class="margin-bottom-20">Billing Details</h4>
+                    {{ form_start(personalinfo_form) }}
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                {{ form_label(personalinfo_form.customerFirstName) }}
+                                {{ form_widget(personalinfo_form.customerFirstName) }}
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                {{ form_label(personalinfo_form.customerLastName) }}
+                                {{ form_widget(personalinfo_form.customerLastName) }}
+                            </div>
+                        </div>
+                        <div>
+                            {{ form_label(personalinfo_form.customerCompany) }}
+                            {{ form_widget(personalinfo_form.customerCompany) }}
+                        </div>
+                        <div>
+                            {{ form_label(personalinfo_form.customerEmail) }}
+                            {{ form_widget(personalinfo_form.customerEmail) }}
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                {{ form_label(personalinfo_form.customerCity) }}
+                                {{ form_widget(personalinfo_form.customerCity) }}
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                {{ form_label(personalinfo_form.postalCode) }}
+                                {{ form_widget(personalinfo_form.postalCode) }}
+                            </div>
+                        </div>
+                        <div>
+                            {{ form_label(personalinfo_form.customerPhone) }}
+                            {{ form_widget(personalinfo_form.customerPhone) }}
+                        </div>
+                        <div>
+                            {{ form_label(personalinfo_form.customerAddress) }}
+                            {{ form_widget(personalinfo_form.customerAddress) }}
+                        </div>
+                        <div class="container">
+                            <div class="send-button row justify-content-center">
+                                <div class="col-4 text-center">{{ form_widget(personalinfo_form.save) }}</div>
+                            </div>
+                        </div>
+                    {{ form_rest(personalinfo_form) }}
+                    {{ form_end(personalinfo_form) }}
                 </div>
 
-                <div>{{ form_widget(personalinfo_form.customerEmail, { 'attr': {'placeholder': 'translate.form_email', 'class': 'contact-input'} }) }}</div>
-                <div class="alert-danger">{{ form_errors(personalinfo_form.customerEmail) }}</div>
-
-                <div>{{ form_widget(personalinfo_form.customerPhone, { 'attr': {'placeholder': 'translate.phone', 'class': 'contact-input'} }) }}</div>
-                <div class="alert-danger">{{ form_errors(personalinfo_form.customerPhone) }}</div>
-
-                <div>{{ form_widget(personalinfo_form.customerCompany, { 'attr': {'placeholder': 'translate.company', 'class': 'contact-input'} }) }}</div>
-                <div class="alert-danger">{{ form_errors(personalinfo_form.customerCompany) }}</div>
-
-                <div class="alert-danger">{{ form_errors(personalinfo_form) }}</div>
-
-                <div style="text-align: center;margin-top: 25px;"><input type="submit" class="btn contact-btn" value="{{ 'translate.form_save'|trans }}"></div>
-                {{ form_rest(personalinfo_form) }}
-                {{ form_end(personalinfo_form) }}
-            </div>
-        </div>
+                <div class="col-12 col-lg-4">
+                    <div class="payment-detail-box">
+                        <h5 class="margin-bottom-20">Your Order</h5>
+                        <h6 class="heading-uppercase">Product:</h6>
+                        <ul class="payment-detail-product-list">
+                        {% set subTotal=0 %}
+                        {% for item in items1 %}
+                            {% set total = item.quantity*item.product.price %}
+                            {% set subTotal = subTotal + total %}
+                            <li>{{ item.product.name }}<span class="payment-detail-product-quantity">{{ item.quantity }}</span><span>{{ total }} DT</span></li>
+                        {% endfor %}
+                        </ul>
+                        <ul>
+                            <li><h6 class="heading-uppercase">Total:</h6><span class="text-dark">{{ subTotal }} DT</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
     </div>
 
     {% include 'default/footer.html.twig' %}

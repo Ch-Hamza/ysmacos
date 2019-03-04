@@ -1,121 +1,88 @@
 {% extends 'base.html.twig' %}
-
 {% block body %}
-    <div style="position: fixed">
-        <div><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'fr'})) }}"><img src="{{ asset('admin_assets/images/flags/fr.png') }}" alt=""></a></div>
-        <div><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'ar'})) }}"><img src="{{ asset('admin_assets/images/flags/tn.png') }}" alt=""></a></div>
+    {% include 'default/header.html.twig' %}
+
+    {% embed 'default/page-header.html.twig' %}
+        {% block page_title %}Product List{% endblock %}
+        {% block page_title1 %}Product List{% endblock %}
+    {% endembed %}
+
+    <!-- Scroll to top button -->
+    <div class="scrolltotop">
+        <a class="button-circle button-circle-sm button-circle-dark" href="#"><i class="ti-arrow-up"></i></a>
     </div>
-    <div class="custom-header-products">
-        <div class="custom-container-products">
+    <!-- end Scroll to top button -->
+
+    <!-- Products section -->
+    <div class="section">
+
+        <!-- Fullscreen Search Form -->
+        <div class="search-style-2 pb-5">
             <div class="container">
-                <div class="row align-items-right justify-content-center custom-navbar-row">
-                    <nav class="navbar navbar-expand navbar-dark">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                <div class="row">
+                    <div class="col-12 col-sm-10 col-md-8 col-lg-6 text-center">
+                        <form action="{{ path('index_products_page') }}" class="form-inline form-style-5" method="get">
+                            <input type="text" class="form-control font-large" name="filter" placeholder="Search.." required>
+                            <button style="font-size: 1.5em;" class="mb-2 ml-2"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div>
+        <!-- end Fullscreen Search Form -->
 
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-custom-title-product" href="{{ path('index_page') }}">{{ 'translate.home'|trans }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-custom-title-product" href="{{ path('index_products_page_l') }}">{{ 'translate.products'|trans }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-custom-title-product" href="{{ path('index_recipes_page_l') }}">{{ 'translate.recette'|trans }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link navbar-custom-title-product" href="{{ path('contact_page_l') }}">{{ 'translate.contact'|trans }}</a>
-                                </li>
-                            </ul>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    {% if app.request.get('page') != 0 %}
+                        {% set spage = app.request.get('page') %}
+                    {% else %}
+                        {% set spage = 1 %}
+                    {% endif %}
+                    <h6 class="heading-uppercase no-margin">Showing {{ 1+9*(spage-1) }}-{{ 9+(spage-1)*9 }} out of {{ products.getTotalItemCount }}</h6>
+                </div>
+            </div>
 
-                            {% if cartLogo!=0 %}
-                                <ul class="navbar-nav align-items-center">
-                                    <li class="nav-item">
-                                        <a class="nav-link cart-logo" href="{{ path('cart_page') }}">
-                                            <i class="icon-cart5" style="font-size: 1.5em; color: darkgrey;"></i>
-                                            <span class="badge badge-pill badge-dark">{{ cartLogo }}</span>
+            <div class="row product-wrapper margin-top-50">
+                {% for p in products %}
+                    <div class="col-12 col-md-6 col-lg-4 product">
+                        <div class="product-img">
+                            <a href="{{ path('product_details_page', {'id': p.id}) }}">
+                                <img src="{{ vich_uploader_asset(p,'imageFile') }}" alt="">
+                            </a>
+                            <div class="product-img-hover">
+                                <form action="{{ path('add_to_cart_page', {'id': p.id}) }}" method="post">
+                                    <h6 class="heading-uppercase">
+                                        <a href="{{ path('add_to_cart_page', {'id': p.id}) }}">
+                                            <input class="custom-add-cart" type="submit" value="Add to Cart">
                                         </a>
-                                    </li>
-                                </ul>
-                            {% endif %}
+                                    </h6>
+                                </form>
+                            </div>
                         </div>
-                    </nav>
-                </div>
-                <div class="row align-items center justify-content-center">
-                    <div class="custom-title3">{{ 'translate.product-page-header'|trans }}</div>
-                </div>
-                <div class="row align-items center justify-content-center">
-                    <div class="custom-title4">{{ 'translate.product-page-header1'|trans }}</div>
-                </div>
+                        <div class="product-info">
+                            <h6><a href="{{ path('product_details_page', {'id': p.id}) }}">{{ p.name }}</a></h6>
+                            <!-- Product Category -->
+                            <ul class="list-horizontal">
+                                <li><a href="{{ path('product_details_page', {'id': p.id}) }}">{{ p.category }}</a></li>
+                            </ul>
+                            <!-- Product Price -->
+                            <div class="product-price">
+                                <h6>{{ p.price }} DT</h6>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
-        </div>
-    </div>
 
-    <div class="custom-product-list">
-        <div class="row justify-content-center" style="margin-bottom: 40px;">
-            <img class="waggle" src="{{ asset('assets/images/quality2.png') }}" alt="" style="width: 200px;height: 200px;">
-        </div>
-        <div class="row justify-content-center" style="margin-bottom: 50px;">
-            <div class="col-lg-2 col-md-4" style="margin: 10px;">
-                <div class="btn-products category text-center">{{ 'translate.product-cat'|trans }}</div>
-            </div>
-            <div class="col-lg-2 col-md-4" style="margin: 10px;">
-                <div class="btn-products category text-center">{{ 'translate.moz'|trans }}</div>
-            </div>
-            <div class="col-lg-2 col-md-4" style="margin: 10px;">
-                <div class="btn-products category text-center">{{ 'translate.fb'|trans }}</div>
-            </div>
-            <div class="col-lg-2 col-md-4" style="margin: 10px;">
-                <div class="btn-products category text-center">{{ 'translate.gouta'|trans }}</div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            {% for p in products %}
-                <div class="col-lg-3 col-sm-5 col-md-3 custom-product-item" {% if app.request.locale == 'ar' %}data_category="{{ p.categoryAr }}{% else %}data_category="{{ p.category }}{% endif %}">
-                    <a href="{{ path('product_details_page_l', {'id': p.id}) }}">
-                        <div><img class="img-fluid" src="{{ vich_uploader_asset(p,'imageFile') }}" alt=""></div>
-                        <hr>
-                        {% if app.request.locale == 'ar' %}
-                            <div class="text-center custom-item-name">{{ p.nameAr }}</div>
-                        {% else %}
-                            <div class="text-center custom-item-name">{{ p.name }}</div>
-                        {% endif %}
-                    </a>
-                </div>
-            {% endfor %}
+            <nav>
+                <ul class="pagination justify-content-center margin-top-70">
+                    {{ knp_pagination_render(products) }}
+                </ul>
+            </nav>
         </div>
     </div>
+    <!-- end Products section -->
+
     {% include 'default/footer.html.twig' %}
-{% endblock %}
-{% block javascripts %}
-    {{ parent() }}
-    <script>
-        $(document).ready(function () {
-            $('.category').on('click', function (e) {
-
-                var clicked_cat = $(e.target).text();
-                var products = $('.custom-product-item');
-                if(clicked_cat === 'Tout les Produits' || clicked_cat === 'جميع المنتجات')
-                {
-                    $.each(products, function (key, value) {
-                        $(value).show();
-                    });
-                }
-                else {
-                    $.each(products, function (key, value) {
-                        var product_cat = $(value).attr('data_category');
-                        var clicked_cat = $(e.target).text();
-                        if(product_cat === clicked_cat) {
-                            $(value).show();
-                        }
-                        else {
-                            $(value).hide();
-                        }
-                    });
-                }
-            })
-        });
-    </script>
 {% endblock %}

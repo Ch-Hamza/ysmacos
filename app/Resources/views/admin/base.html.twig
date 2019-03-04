@@ -113,10 +113,6 @@
                                 <a href="{{ path('list_products_page') }}"><i class=" icon-home8"></i> <span>Produits</span></a>
                             </li>
 
-                            <li {% if app.request.attributes.get('_route') == 'list_recipe_page' %} class="active"{% endif %}>
-                                <a href="{{ path('list_recipe_page') }}"><i class="icon-book2"></i> <span>Recettes</span></a>
-                            </li>
-
                             <li {% if app.request.attributes.get('_route') == 'list_messages_page' %} class="active"{% endif %}>
                                 <a href="{{ path('list_messages_page') }}"><i class=" icon-mail5"></i> <span>Messages</span></a>
                             </li>

@@ -2,9 +2,12 @@
 
 namespace ProductBundle\Form;
 
+use ProductBundle\Entity\Brand;
 use ProductBundle\Entity\Product;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -18,25 +21,20 @@ class ProductType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
-            ->add('name_ar', TextType::class)
+            ->add('brand', EntityType::class, array(
+                'class' => Brand::class,
+                'choice_label' => 'name',
+            ))
             ->add('category', ChoiceType::class, array(
                 'choices' => array(
-                    'Mozzarella' => 'Mozzarella',
-                    'Fromage blanc' => 'Fromage blanc',
-                    'Gouta' => 'Gouta',
+                    'T-Shirt' => 'T-Shirt',
+                    'Hat' => 'Hat',
+                    'Shoes' => 'Shoes',
                 ),
                 'placeholder' => 'Select',
             ))
-            ->add('categoryAr', ChoiceType::class, array(
-                'choices' => array(
-                    'موزاريلا' => 'موزاريلا',
-                    'الجبن الأبيض' => 'الجبن الأبيض',
-                    'قوتة' => 'قوتة',
-                ),
-                'placeholder' => 'Select',
-            ))
+            ->add('price', IntegerType::class)
             ->add('description', TextareaType::class)
-            ->add('description_ar', TextareaType::class)
             ->add('imageFile', VichImageType::class, array(
                 'download_link'     => false,
                 'required'    => false,

@@ -19,26 +19,28 @@ class MessageType extends AbstractType
                 'attr' => array(
                     'placeholder' => 'Name',
                     'class' => 'form-control',
-                    'label' => 'translate.form_name',
+                    'label' => 'Name',
+                    'required' => true,
                 )
             ))
             ->add('email', EmailType::class, array(
                 'attr' => array(
                     'placeholder' => 'Email Address',
                     'class' => 'form-control',
-                    'label' => 'translate.form_email',
+                    'label' => 'Email',
+                    'required' => true,
                 )
             ))
             ->add('message', TextareaType::class, array(
                 'attr' => array(
                     'class' => 'form-control',
                     'rows' => 4,
-                    'label' => 'translate.form_message',
+                    'label' => 'Message',
+                    'required' => true,
                 )
             ))
             ->add('save',  SubmitType::class, array(
-                'label' => 'translate.form_save',
-                "attr" => array('class' => 'contact-btn'),
+                'label' => 'Send',
             ))
         ;
     }

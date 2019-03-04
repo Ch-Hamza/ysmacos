@@ -18,7 +18,9 @@ class DevisType extends AbstractType
                 'entry_type' => CommandeItemEditTypeClient::class,
                 'entry_options' => array('label' => false),
             ))
-            ->add('save',  SubmitType::class)
+            ->add('save',  SubmitType::class, array(
+                'attr' => array('class' => 'button button-xl button-dark button-fullwidth')
+            ))
         ;
     }
 

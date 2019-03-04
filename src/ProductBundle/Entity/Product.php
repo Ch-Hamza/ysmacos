@@ -34,23 +34,9 @@ class Product
     /**
      * @var string
      *
-     * @ORM\Column(name="name_ar", type="string", length=255)
-     */
-    private $name_ar;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="category", type="string", length=255)
      */
     private $category;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="category_ar", type="string", length=255)
-     */
-    private $category_ar;
 
     /**
      * @var string
@@ -62,9 +48,10 @@ class Product
     /**
      * @var string
      *
-     * @ORM\Column(name="description_ar", type="text")
+     * @ORM\Column(name="price", type="integer")
      */
-    private $description_ar;
+    private $price;
+
 
     /**
      * @ORM\Column(type="boolean", length=255, nullable=true)
@@ -89,6 +76,11 @@ class Product
      * @var \DateTime
      */
     private $updatedAt;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="ProductBundle\Entity\Brand", inversedBy="products")
+     */
+    private $brand;
 
 
     /**
@@ -221,38 +213,6 @@ class Product
     /**
      * @return string
      */
-    public function getNameAr()
-    {
-        return $this->name_ar;
-    }
-
-    /**
-     * @param string $name_ar
-     */
-    public function setNameAr($name_ar)
-    {
-        $this->name_ar = $name_ar;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDescriptionAr()
-    {
-        return $this->description_ar;
-    }
-
-    /**
-     * @param mixed $description_ar
-     */
-    public function setDescriptionAr($description_ar)
-    {
-        $this->description_ar = $description_ar;
-    }
-
-    /**
-     * @return string
-     */
     public function getCategory()
     {
         return $this->category;
@@ -267,19 +227,35 @@ class Product
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getCategoryAr()
+    public function getBrand()
     {
-        return $this->category_ar;
+        return $this->brand;
     }
 
     /**
-     * @param string $category_ar
+     * @param mixed $brand
      */
-    public function setCategoryAr($category_ar)
+    public function setBrand($brand)
     {
-        $this->category_ar = $category_ar;
+        $this->brand = $brand;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * @param mixed $price
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
     }
 }
 

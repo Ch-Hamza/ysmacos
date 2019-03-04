@@ -39,13 +39,6 @@ class OrderItem
     private $product;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="prix_total", type="integer")
-     */
-    private $prix_total;
-
-    /**
      * Get id
      *
      * @return int

@@ -21,10 +21,10 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new FOS\CKEditorBundle\FOSCKEditorBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
 
             new AppBundle\AppBundle(),
             new ProductBundle\ProductBundle(),
-            new RecipeBundle\RecipeBundle(),
             new AdminBundle\AdminBundle(),
             new OrderBundle\OrderBundle(),
             new MessageBundle\MessageBundle(),

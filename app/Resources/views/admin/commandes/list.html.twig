@@ -27,9 +27,11 @@
 
         <!-- Content area -->
         <div class="content">
+            {% if app.request.attributes.get('_route')=='list_commandes_page' %}
             <div class="row" style="margin: 20px">
                 <a href="{{ path('add_commande_page') }}" class="btn btn-success"><i class="icon-plus3 position-left"></i>Ajouter Commande</a>
             </div>
+            {% endif %}
             <div class="row">
                 {% set sum1 = 0 %}
                 {% for c in commandes %}

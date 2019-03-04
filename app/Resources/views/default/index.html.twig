@@ -1,161 +1,140 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div style="position: fixed">
-        <div><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'fr'})) }}"><img src="{{ asset('admin_assets/images/flags/fr.png') }}" alt=""></a></div>
-        <div><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'ar'})) }}"><img src="{{ asset('admin_assets/images/flags/tn.png') }}" alt=""></a></div>
-    </div>
-    <div class="home-header" style="background-image: url('{{ asset('assets/images/Galbani-Home-Header.jpg') }}')">
-        <div class="container">
-            <div class="row align-items-center custom-row-head justify-content-center">
-                <div class="col-12 text-center">
-                    <div class="custom-title1">{{ 'translate.welcome'|trans }}</div>
-                    <a href="{{ path('index_products_page_l') }}"><div class="offset-4 custom-title2 col-4">{{ 'translate.welcome_button'|trans }}</div></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="custom-header">
-        <div class="container">
-            <div class="row align-items-center justify-content-center custom-navbar-row">
-                <nav class="navbar navbar-expand navbar-dark">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+    {% include 'default/header.html.twig' %}
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link navbar-custom-title" href="{{ path('index_page') }}">{{ 'translate.home'|trans }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link navbar-custom-title" href="{{ path('index_products_page_l') }}">{{ 'translate.products'|trans }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link navbar-custom-title" href="{{ path('index_recipes_page_l') }}">{{ 'translate.recette'|trans }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link navbar-custom-title" href="{{ path('contact_page_l') }}">{{ 'translate.contact'|trans }}</a>
-                            </li>
-                        </ul>
+    <!-- Scroll to top button -->
+    <div class="scrolltotop">
+        <a class="button-circle button-circle-sm button-circle-dark" href="#"><i class="ti-arrow-up"></i></a>
+    </div>
+    <!-- end Scroll to top button -->
 
-                        {% if cartLogo!=0 %}
-                            <ul class="navbar-nav align-items-center">
-                                <li class="nav-item">
-                                    <a class="nav-link cart-logo" href="{{ path('cart_page') }}">
-                                        <i class="icon-cart5"></i>
-                                        <span class="badge badge-pill badge-dark">{{ cartLogo }}</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        {% endif %}
+    <!-- Home section -->
+    <div class="section-xl bg-image parallax" style="background-image: url('{{ asset('assets/images/business-consulting-bg-new.jpg') }}')">
+        <div class="bg-black-02">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-10 col-md-8 col-lg-7">
+                        <div class="bg-black-07 padding-50">
+                            <h2 class="font-weight-light no-margin">Great things in business are never done by one person. They're done by a team of people.</h2>
+                        </div>
                     </div>
-                </nav>
-            </div>
+                </div><!-- end row -->
+            </div><!-- end container -->
         </div>
     </div>
+    <!-- end Home section -->
 
-    <div class="container">
-        <div class="custom-product-title text-center pulse waggle" style="margin-top: 50px;">
-            <img class="waggle" src="{{ asset('assets/images/quality1.png') }}" alt="" style="width: 200px;height: 200px;">
-        </div>
-        <div class="row custom-desc-parag justify-content-center">
-            <div class="col-7">{{ 'translate.top_descrip'|trans }}</div>
-        </div>
-        <hr class="custom-line">
-        <hr class="custom-line">
-    </div>
-
-    <div class="custom-product-list">
-        <div class="custom-product-title text-center">{{ 'translate.prod_pop'|trans }}</div>
-        <div class="row justify-content-center">
-            {% for p in products %}
-                <div class="col-lg-3 col-sm-5 col-md-3 custom-product-item">
-                    <a href="{{ path('product_details_page_l', {'id': p.id}) }}">
-                        <div><img class="img-fluid" src="{{ vich_uploader_asset(p,'imageFile') }}" alt=""></div>
-                        <hr>
-                        {% if app.request.locale == 'ar' %}
-                            <div class="text-center custom-item-name">{{ p.nameAr }}</div>
-                        {% else %}
-                            <div class="text-center custom-item-name">{{ p.name }}</div>
-                        {% endif %}
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
-        <div class="row justify-content-center">
-            <a href="{{ path('index_products_page_l') }}">
-                <div class="custom-procucts-button1">
-                    <span>{{ 'translate.desc_button'|trans }}</span>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <div class="custom-recipe-list">
+    <!-- Services section -->
+    <div class="section bg-grey-lightest">
         <div class="container">
             <div class="row">
-                <div class="col-4">
-                    <div class="custom-recipe-parag">{{ 'translate.recette_desc'|trans }}</div>
-                    <a href="{{ path('index_recipes_page_l') }}">
-                        <div class="custom-recipe-button text-center">
-                            <span class="custom-recipe-parag">{{ 'translate.recette_button'|trans }}</span>
-                        </div>
-                    </a>
+                <div class="col-12 col-md-4 icon-5xl">
+                    <i class="ti-comment-alt text-dark"></i>
+                    <h5 class="font-weight-normal margin-top-20">Business Consultent</h5>
+                    <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
                 </div>
-                <div class="offset-1 col-7">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            {% for r in recipes %}
-                                <li data-target="#carouselExampleIndicators" data-slide-to="{{ loop.index0 }}" {% if loop.index0==0 %}class="active"{% endif %}></li>
-                            {% endfor %}
-                        </ol>
-                        <div class="carousel-inner">
-                            {% for r in recipes %}
-                                <div class="carousel-item {% if loop.index0==0 %}active{% endif %}">
-                                    <img class="img-fluid d-block w-100" src="{{ vich_uploader_asset(r,'imageFile') }}" alt="First slide" style="height: 550px;">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        {% if app.request.locale == 'ar' %}
-                                            <h5 class="custom-recipe-name">{{ r.nameAr }}</h5>
-                                        {% else %}
-                                            <h5 class="custom-recipe-name">{{ r.name }}</h5>
-                                        {% endif %}
-                                        <div class="recipe_carousel_button"><a href="{{ path('recipe_details_page_l', {'id': r.id}) }}" class="custom-recipe-button1">{{ 'translate.recette_see'|trans }}</a></div>
-                                    </div>
-                                </div>
-                            {% endfor %}
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
+                <div class="col-12 col-md-4 icon-5xl">
+                    <i class="ti-settings text-dark"></i>
+                    <h5 class="font-weight-normal margin-top-20">Factory Consultent</h5>
+                    <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
                 </div>
-            </div>
-        </div>
+                <div class="col-12 col-md-4 icon-5xl">
+                    <i class="ti-blackboard text-dark"></i>
+                    <h5 class="font-weight-normal margin-top-20">Strategy &amp; Planning</h5>
+                    <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+                </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
     </div>
+    <!-- end Services section -->
 
-    <div class="container">
-        <div class="text-center custom-desc-title">{{ 'translate.desc_title'|trans }}</div>
-        <div>
-            <div class="row custom-desc1-parag justify-content-center">
-                <div class="col-7">{{ 'translate.desc_parag'|trans }}</div>
-            </div>
-            <div class="row justify-content-center">
-                <a href="{{ path('index_products_page_l') }}">
-                    <div class="custom-procucts-button">
-                        <span>{{ 'translate.desc_button'|trans }}</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <hr class="custom-line">
-        <hr class="custom-line">
+    <!-- About section -->
+    <div class="section">
+        <div class="container">
+            <div class="row col-spacing-50 align-items-center">
+                <div class="col-12 col-lg-6">
+                    <img src="{{ asset('assets/images/business-consulting-about.jpg') }}" alt="">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h2 class="font-weight-light">We Are Mono</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    <!--a class="button button-lg button-radius button-reveal-left-dark margin-top-30" href="#"><i class="ti-arrow-right"></i><span>More About Us</span></a-->
+                </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
     </div>
+    <!-- end About section -->
+
+    <!-- Clients section -->
+    <div class="section bg-dark-lightest">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2 class="font-weight-light">Our Amazing Brands</h2>
+            </div>
+            <ul class="clients-grid column-5">
+                {% for b in brands %}
+                    <li><a href="{{ path('index_products_page') }}?brand={{ b.name }}"><img src="{{ vich_uploader_asset(b,'imageFile') }}" alt=""></a></li>
+                {% endfor %}
+            </ul>
+        </div><!-- end container -->
+    </div>
+    <!-- end Clients section -->
+
+    <!-- Contact section -->
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="margin-bottom-30">
+                        <h6 class="font-weight-normal no-margin">Phone:</h6>
+                        <p>+(216) 55 142 437</p>
+                    </div>
+                    <div class="margin-bottom-30">
+                        <h6 class="font-weight-normal no-margin">Email:</h6>
+                        <p>hamzachebil40@gmail.com</p>
+                    </div>
+                    <div>
+                        <h6 class="font-weight-normal no-margin">Address:</h6>
+                        <p>676 INSAT Centre Urbain Nord BP، Tunis Cedex 1080</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="contact-form text-right">
+                        {{ form_start(contact_form) }}
+                            <div class="form-row">
+                                <div class="col-12 col-sm-6">
+                                    {{ form_widget(contact_form.name, { 'attr': {'placeholder': 'Name' } }) }}
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    {{ form_widget(contact_form.email, { 'attr': {'placeholder': 'E-Mail'} }) }}
+                                </div>
+                            </div>
+                            {{ form_widget(contact_form.message, { 'attr': {'placeholder': 'Message'} }) }}
+                            <div>{{ form_errors(contact_form) }}</div>
+
+                            <div class="text-center">{{ form_widget(contact_form.save, {'attr': {'class': 'button button-lg button-grey button-radius'}}) }}</div>
+                            {{ form_rest(contact_form) }}
+                        {{ form_end(contact_form) }}
+                        <!-- Submit result -->
+                        <div class="submit-result">
+                            <span id="success">Thank you! Your Message has been sent.</span>
+                            <span id="error">Something went wrong, Please try again!</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div>
+    <!-- end Contact section -->
+
+    <!-- Google Maps -->
+    <!--div class="section no-padding-top">
+        <div class="container">
+            <div id="map-canvas" class="gmap-md" data-latitude="36.842893" data-longitude="10.196202"></div>
+        </div>
+    </div-->
+    <!-- end Google Maps -->
 
     {% include 'default/footer.html.twig' %}
 

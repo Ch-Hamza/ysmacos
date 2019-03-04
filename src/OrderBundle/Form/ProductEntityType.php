@@ -23,9 +23,6 @@ class ProductEntityType extends AbstractType
                 'attr' =>  array('min' => 1),
                 'data' => '1',
             ))
-            ->add('prixTotal', IntegerType::class, array(
-                'attr' =>  array('min' => 1),
-            ))
         ;
     }
 

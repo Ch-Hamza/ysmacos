@@ -38,6 +38,7 @@
                         <thead>
                         <tr>
                             <th>Nom</th>
+                            <th>Price</th>
                             <th>Description</th>
                             <th>Image</th>
                             <th>Actions</th>
@@ -47,6 +48,7 @@
                         {% for p in products %}
                             <tr>
                                 <td>{{ p.name }}</td>
+                                <td>{{ p.price }}</td>
                                 <td style="max-width: 200px !important;word-wrap: break-word;">{{ p.description }}</td>
                                 <td><img src="{{ vich_uploader_asset(p,'imageFile') }}" alt="" style="width: 150px;height: 150px;"></td>
                                 <td>

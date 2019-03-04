@@ -31,6 +31,9 @@
                         {{ form_row(form.orderInfo.customerCompany) }}
                         {{ form_row(form.orderInfo.customerEmail) }}
                         {{ form_row(form.orderInfo.customerPhone) }}
+                        {{ form_row(form.orderInfo.customerCity) }}
+                        {{ form_row(form.orderInfo.customerAddress) }}
+                        {{ form_row(form.orderInfo.postalCode) }}
                         {{ form_row(form.saleDate) }}
 
                         <ul class="tags list-group" style="padding: 30px;margin: 30px" data-prototype="{{ form_widget(form.items.vars.prototype)|e('html_attr') }}">
@@ -48,6 +51,9 @@
                                 {{ form_widget(form.save, {'attr': {'class': 'btn bg-teal-300'}}) }}
                                 <a class="btn btn-default" href="{{ path('list_commandes_page') }}">Back</a>
                             </div>
+                        </div>
+                        <div style="visibility: hidden;">
+                            {{ form_widget(form.orderInfo.save) }}
                         </div>
 
                         {{ form_errors(form) }}

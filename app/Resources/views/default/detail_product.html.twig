@@ -2,41 +2,56 @@
 
 {% block body %}
     {% include 'default/header.html.twig' %}
-    <div class="container">
-        <div class="row justify-content-center" style="margin-top: 50px;">
-            <img class="waggle" src="{{ asset('assets/images/quality2.png') }}" alt="" style="width: 200px;height: 200px;">
-        </div>
-        <div class="row custom-product-row">
-            <div class="offset-1 col-5 product-image">
-                <img class="img-fluid recipe-image" src="{{ vich_uploader_asset(product,'imageFile') }}" alt="">
-            </div>
-            <div class="offset-1 col-5 product-col">
-                {% if app.request.locale == 'ar' %}
-                    <div class="product-name">{{ product.nameAr }}</div>
-                {% else %}
-                    <div class="product-name">{{ product.name }}</div>
-                {% endif %}
-                <div class="product-description">{{ 'translate.description'|trans }}</div>
-                {% if app.request.locale == 'ar' %}
-                    <div>{{ product.descriptionAr }}</div>
-                {% else %}
-                    <div>{{ product.description }}</div>
-                {% endif %}
-                <div class="product-add">
-                    <div class="quantity-product">{{ 'translate.quantity'|trans }}</div>
-                    {{ form_start(cart_form, {'attr': {'class': 'form-horizontal'}}) }}
-                    {{ form_row(cart_form.quantity) }}
-                    <a href="">
-                        <div class="add-button">
-                            <i class="icon-cart"></i>
-                            <input type="submit" value="{{ 'translate.addtocart'|trans }}" class="btn">
+    {% embed 'default/page-header.html.twig' %}
+        {% block page_title %}Product Details{% endblock %}
+        {% block page_title1 %}Product Details{% endblock %}
+    {% endembed %}
+
+    <!-- Product Content -->
+    <div class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6 product-single">
+                    <div class="product-single-img">
+                        <div class="product-single-img-slider">
+                            <div data-hash="first">
+                                <img src="{{ vich_uploader_asset(p,'imageFile') }}">
+                            </div>
                         </div>
-                    </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <!-- Product Price -->
+                    <div class="product-price">
+                        <h5 class="font-weight-light">{{ p.price }} DT</h5>
+                    </div>
+                    <!-- Product Title -->
+                    <h4>{{ p.name }}</h4>
+                    <!-- Product text -->
+                    <p>
+                        {{ p.description }}
+                    </p>
+                    <!-- Order -->
+                    {{ form_start(cart_form) }}
+                    <div class="margin-top-20 margin-bottom-20">
+                        <div class="product-quantity margin-right-30">
+                            <div class="row margin-0">
+                                <a class="button-circle button-circle-xs button-circle-grey dec"><i class="ti-minus"></i></a>
+                                {{ form_widget(cart_form.quantity) }}
+                                <a class="button-circle button-circle-xs button-circle-grey inc"><i class="ti-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="heading-uppercase button button-lg button-dark send-button1">
+                        {{ form_widget(cart_form.save, { 'label': 'Add to cart' }) }}
+                    </h6>
                     {{ form_rest(cart_form) }}
                     {{ form_end(cart_form) }}
                 </div>
-            </div>
-        </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
     </div>
+    <!-- end Product Content -->
+
     {% include 'default/footer.html.twig' %}
 {% endblock %}

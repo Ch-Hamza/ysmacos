@@ -15,7 +15,9 @@ class FullCommande extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('orderInfo', PersonalInfoType::class)
+            ->add('orderInfo', PersonalInfoType::class, array(
+                'label' => false
+            ))
             ->add('saleDate', DateType::class, array(
                 'data' => new \DateTime("now")
             ))

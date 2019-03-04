@@ -86,6 +86,41 @@ class OrderInfo
      */
     private $customerEmail;
 
+    /**
+     * @var string
+     *
+     * @Assert\NotBlank(
+     *     message="City can't be blank",
+     * )
+     *
+     * @ORM\Column(name="customer_city", type="string", length=255, nullable=true)
+     */
+    private $customerCity;
+
+    /**
+     * @var string
+     *
+     * @Assert\NotBlank(
+     *     message="Address can't be blank",
+     * )
+     *
+     * @ORM\Column(name="customer_address", type="string", length=255, nullable=true)
+     */
+    private $customerAddress;
+
+    /**
+     * @var string
+     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(
+     *     pattern="/\d{4}/",
+     *     message="Invalic Code",
+     * )
+     *
+     * @ORM\Column(name="customer_postal_code", type="string", length=255, nullable=true)
+     */
+    private $postalCode;
+
 
     /**
      * Get id
@@ -207,6 +242,54 @@ class OrderInfo
     public function setCustomerCompany($customerCompany)
     {
         $this->customerCompany = $customerCompany;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCustomerCity()
+    {
+        return $this->customerCity;
+    }
+
+    /**
+     * @param string $customerCity
+     */
+    public function setCustomerCity($customerCity)
+    {
+        $this->customerCity = $customerCity;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCustomerAddress()
+    {
+        return $this->customerAddress;
+    }
+
+    /**
+     * @param string $customerAddress
+     */
+    public function setCustomerAddress($customerAddress)
+    {
+        $this->customerAddress = $customerAddress;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPostalCode()
+    {
+        return $this->postalCode;
+    }
+
+    /**
+     * @param string $postalCode
+     */
+    public function setPostalCode($postalCode)
+    {
+        $this->postalCode = $postalCode;
     }
 }
 
