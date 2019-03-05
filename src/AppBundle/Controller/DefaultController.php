@@ -349,4 +349,23 @@ class DefaultController extends Controller
             'cartLogo' => $cartLogo,
         ));
     }
+
+    /**
+     * @Route("/about-us", name="about_us_page")
+     */
+    public function aboutAction()
+    {
+        $serializer = $this->get('jms_serializer');
+        $session = $this->get('session');
+        $cartLogo = 0;
+        if ($session->has('cartElements')) {
+            $commandeJson = $session->get('cartElements');
+            $commande = $serializer->deserialize($commandeJson, Devis::class, 'json');
+            $cartLogo = count($commande->getItems());
+        }
+
+        return $this->render('default/about_us.html.twig', array(
+            'cartLogo' => $cartLogo,
+        ));
+    }
 }

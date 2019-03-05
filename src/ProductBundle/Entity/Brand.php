@@ -32,6 +32,13 @@ class Brand
     private $name;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
+
+    /**
      * @ORM\Column(type="string", length=255)
      * @var string
      */
@@ -145,6 +152,22 @@ class Brand
     public function setProducts($products)
     {
         $this->products = $products;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
     }
 }
 
