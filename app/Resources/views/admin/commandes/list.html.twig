@@ -50,7 +50,7 @@
                                 <div class="col-sm-6">
                                     {% set sum1 = 0 %}
                                     {% for item in c.items %}
-                                        {% set sum1 = sum1 + item.prixTotal %}
+                                        {% set sum1 = sum1 + item.quantity*item.product.price %}
                                     {% endfor %}
                                     <h6 class="text-semibold text-right no-margin-top">{{ sum1 }} DT</h6>
                                     <div class="text-right">
@@ -128,7 +128,7 @@
                                                 <h6 class="no-margin">{{ item.product.name }}</h6>
                                             </td>
                                             <td>{{ item.quantity }}</td>
-                                            <td><span class="text-semibold">{{ item.prixTotal }} DT</span></td>
+                                            <td><span class="text-semibold">{{ item.quantity*item.product.price }} DT</span></td>
                                         </tr>
                                     {% endfor %}
                                     </tbody>
