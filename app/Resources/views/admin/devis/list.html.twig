@@ -46,6 +46,11 @@
                                     </div>
 
                                     <div class="col-sm-6">
+                                        {% set sum1 = 0 %}
+                                        {% for item in c.items %}
+                                            {% set sum1 = sum1 + item.quantity*item.product.price %}
+                                        {% endfor %}
+                                        <h6 class="text-semibold text-right no-margin-top">{{ sum1 }} DT</h6>
                                         <div class="text-right">
                                             Status: &nbsp;
                                             <span class="label bg-warning-300 dropdown-toggle" data-toggle="dropdown">Pending</span>
@@ -108,6 +113,7 @@
                                         <tr>
                                             <th>Description</th>
                                             <th class="col-sm-1">Quantity</th>
+                                            <th class="col-sm-1">Total</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -117,10 +123,31 @@
                                                     <h6 class="no-margin">{{ item.product.name }}</h6>
                                                 </td>
                                                 <td>{{ item.quantity }}</td>
+                                                <td><span class="text-semibold">{{ item.quantity*item.product.price }} DT</span></td>
                                             </tr>
                                         {% endfor %}
                                         </tbody>
                                     </table>
+                                </div>
+
+                                <div class="panel-body">
+                                    <div class="row invoice-payment">
+                                        <div class="col-sm-offset-7 col-sm-5">
+                                            <div class="content-group">
+                                                <h6>Total due</h6>
+                                                <div class="table-responsive no-border">
+                                                    <table class="table">
+                                                        <tbody>
+                                                        <tr>
+                                                            <th>Total:</th>
+                                                            <td class="text-right text-primary"><h5 class="text-semibold">{{ sum1 }} DT</h5></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="modal-footer">

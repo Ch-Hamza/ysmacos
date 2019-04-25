@@ -21,7 +21,7 @@ class DefaultController extends Controller
         $count_messages = $this->getDoctrine()->getManager()->getRepository(Message::class)->countMessages();
         $revnue = $this->getDoctrine()->getManager()->getRepository(OrderItem::class)->countRevenue();
 
-        dump($revnue);
+        //dump($revnue);
         return $this->render('admin/index.html.twig', array(
             'list' => $list,
             'count_orders' => $count_orders,

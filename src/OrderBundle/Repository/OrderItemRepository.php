@@ -14,7 +14,8 @@ class OrderItemRepository extends \Doctrine\ORM\EntityRepository
     {
         $qb = $this->createQueryBuilder('order_item')
             ->leftJoin('order_item.commande', 'c')
-            ->addSelect('SUM(order_item.prix_total) as total_revenue')
+            ->leftJoin('order_item.product', 'p')
+            ->addSelect('SUM(p.price) as total_revenue')
             ->groupBy('order_item.commande')
             ->where('c.archived = true')
             ->andWhere('c.enabled = true');
