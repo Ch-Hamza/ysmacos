@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba0aa3af-7c69-477a-b9bb-79b22fca1431" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/admin/commandes/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/admin/commandes/list.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="ba0aa3af-7c69-477a-b9bb-79b22fca1431" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/commandes/list.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="130" column="111" selection-start-line="130" selection-start-column="111" selection-end-line="130" selection-end-column="111" />
+            <state relative-caret-position="1676">
+              <caret line="130" column="111" selection-start-line="130" selection-start-column="79" selection-end-line="130" selection-end-column="111" />
             </state>
           </provider>
         </entry>
@@ -444,12 +442,12 @@
       <workItem from="1551632616602" duration="14638000" />
       <workItem from="1551797097253" duration="5720000" />
       <workItem from="1552059771468" duration="54000" />
-      <workItem from="1556224963438" duration="3731000" />
+      <workItem from="1556224963438" duration="3995000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233686000" />
+    <option name="totallyTimeSpent" value="233950000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -813,8 +811,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/commandes/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="130" column="111" selection-start-line="130" selection-start-column="111" selection-end-line="130" selection-end-column="111" />
+        <state relative-caret-position="1676">
+          <caret line="130" column="111" selection-start-line="130" selection-start-column="79" selection-end-line="130" selection-end-column="111" />
         </state>
       </provider>
     </entry>
