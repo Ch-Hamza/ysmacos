@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba0aa3af-7c69-477a-b9bb-79b22fca1431" name="Default" comment="" />
+    <list default="true" id="ba0aa3af-7c69-477a-b9bb-79b22fca1431" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +18,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-347">
+            <state relative-caret-position="1656">
               <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
             </state>
           </provider>
@@ -25,11 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="384">
               <caret line="21" column="95" selection-start-line="21" selection-start-column="95" selection-end-line="21" selection-end-column="95" />
-              <folding>
-                <element signature="e#913#936#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -39,18 +38,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
               <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-              <folding>
-                <element signature="e#1882#1905#0#Twig" expanded="true" />
-              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/commandes/list.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3120">
+              <caret line="130" column="111" selection-start-line="130" selection-start-column="79" selection-end-line="130" selection-end-column="111" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/commandes/list.html.twig">
+        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1676">
-              <caret line="130" column="111" selection-start-line="130" selection-start-column="79" selection-end-line="130" selection-end-column="111" />
+            <state relative-caret-position="283">
+              <caret line="99" column="87" selection-start-line="99" selection-start-column="87" selection-end-line="99" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -58,11 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/devis/list.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
+            <state relative-caret-position="3000">
               <caret line="125" column="115" selection-start-line="125" selection-start-column="83" selection-end-line="125" selection-end-column="115" />
-              <folding>
-                <element signature="e#12#32#0#Twig" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -234,7 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,6 +247,12 @@
               <item name="brands" type="b2602c69:ProjectViewProjectNode" />
               <item name="brands" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
+              <item name="brands" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="brands" type="b2602c69:ProjectViewProjectNode" />
@@ -346,11 +353,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../proj_lab" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -443,11 +451,14 @@
       <workItem from="1551797097253" duration="5720000" />
       <workItem from="1552059771468" duration="54000" />
       <workItem from="1556224963438" duration="3995000" />
+      <workItem from="1556336258263" duration="475000" />
+      <workItem from="1556368464847" duration="598000" />
+      <workItem from="1556494782300" duration="117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233950000" />
+    <option name="totallyTimeSpent" value="235140000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -460,13 +471,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26399395" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2753404" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -475,8 +483,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32885906" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32885906" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32991454" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32991454" />
       <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -703,13 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-347">
-          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -758,13 +761,6 @@
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="99" column="87" selection-start-line="99" selection-start-column="87" selection-end-line="99" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OrderBundle/Entity/OrderItem.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -779,13 +775,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1656">
+          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="384">
           <caret line="21" column="95" selection-start-line="21" selection-start-column="95" selection-end-line="21" selection-end-column="95" />
-          <folding>
-            <element signature="e#913#936#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -799,20 +799,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/devis/list.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/commandes/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="125" column="115" selection-start-line="125" selection-start-column="83" selection-end-line="125" selection-end-column="115" />
-          <folding>
-            <element signature="e#12#32#0#Twig" expanded="true" />
-          </folding>
+        <state relative-caret-position="3120">
+          <caret line="130" column="111" selection-start-line="130" selection-start-column="79" selection-end-line="130" selection-end-column="111" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/commandes/list.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/devis/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1676">
-          <caret line="130" column="111" selection-start-line="130" selection-start-column="79" selection-end-line="130" selection-end-column="111" />
+        <state relative-caret-position="3000">
+          <caret line="125" column="115" selection-start-line="125" selection-start-column="83" selection-end-line="125" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="99" column="87" selection-start-line="99" selection-start-column="87" selection-end-line="99" selection-end-column="87" />
         </state>
       </provider>
     </entry>
