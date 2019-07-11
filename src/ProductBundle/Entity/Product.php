@@ -46,18 +46,37 @@ class Product
     private $description;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="promo", type="integer", length=255)
+     */
+    private $promo;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="promo_enabled", type="boolean", length=255)
+     */
+    private $promo_enabled;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="price", type="integer")
      */
     private $price;
 
-
     /**
      * @ORM\Column(type="boolean", length=255, nullable=true)
      * @var bool
      */
     private $enabled;
+
+    /**
+     * @ORM\Column(type="boolean", length=255, nullable=true)
+     * @var bool
+     */
+    private $featured;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -76,11 +95,6 @@ class Product
      * @var \DateTime
      */
     private $updatedAt;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="ProductBundle\Entity\Brand", inversedBy="products")
-     */
-    private $brand;
 
 
     /**
@@ -229,22 +243,6 @@ class Product
     /**
      * @return mixed
      */
-    public function getBrand()
-    {
-        return $this->brand;
-    }
-
-    /**
-     * @param mixed $brand
-     */
-    public function setBrand($brand)
-    {
-        $this->brand = $brand;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getPrice()
     {
         return $this->price;
@@ -256,6 +254,54 @@ class Product
     public function setPrice($price)
     {
         $this->price = $price;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPromo()
+    {
+        return $this->promo;
+    }
+
+    /**
+     * @param int $promo
+     */
+    public function setPromo($promo)
+    {
+        $this->promo = $promo;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isPromoEnabled()
+    {
+        return $this->promo_enabled;
+    }
+
+    /**
+     * @param bool $promo_enabled
+     */
+    public function setPromoEnabled($promo_enabled)
+    {
+        $this->promo_enabled = $promo_enabled;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isFeatured()
+    {
+        return $this->featured;
+    }
+
+    /**
+     * @param bool $featured
+     */
+    public function setFeatured($featured)
+    {
+        $this->featured = $featured;
     }
 }
 

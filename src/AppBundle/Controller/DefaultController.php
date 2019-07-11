@@ -7,11 +7,9 @@ use MessageBundle\Entity\Message;
 use OrderBundle\Entity\Devis;
 use OrderBundle\Entity\DevisItem;
 use OrderBundle\Entity\OrderInfo;
-use OrderBundle\Form\CommandeItemEditTypeClient;
 use OrderBundle\Form\CommandeItemEditTypeClient1;
 use OrderBundle\Form\DevisType;
 use OrderBundle\Form\PersonalInfoType;
-use ProductBundle\Entity\Brand;
 use ProductBundle\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -34,11 +32,6 @@ class DefaultController extends Controller
             return $this->redirectToRoute('contact_page');
         }
 
-        $em = $this->getDoctrine()->getManager();
-        $queryBuilder = $em->getRepository(Brand::class)->createQueryBuilder('b');
-        $queryBuilder->setMaxResults(10);
-        $brands = $queryBuilder->getQuery()->getResult();
-
         $serializer = $this->get('jms_serializer');
         $session = $this->get('session');
         $cartLogo = 0;
@@ -48,10 +41,12 @@ class DefaultController extends Controller
             $cartLogo = count($commande->getItems());
         }
 
+        $products = $this->getDoctrine()->getManager()->getRepository(Product::class)->findBy(array('enabled' => true, 'featured' => true));
+
         return $this->render('default/index.html.twig', array(
             'cartLogo' => $cartLogo,
             'contact_form' => $contact_form->createView(),
-            'brands' => $brands,
+            'products' => $products,
         ));
     }
 
@@ -62,15 +57,14 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $queryBuilder = $em->getRepository(Product::class)->createQueryBuilder('p');
-        $queryBuilder->leftJoin('p.brand', 'b');
         $queryBuilder->where('p.enabled = true');
         if($request->query->getAlnum('filter')) {
             $queryBuilder->where('p.name LIKE :name')
                 ->setParameter('name', '%'.$request->query->getAlnum('filter').'%');
         }
-        if($request->query->getAlnum('brand')) {
-            $queryBuilder->where('b.name LIKE :brand')
-                ->setParameter('brand', '%'.$request->query->getAlnum('brand').'%');
+        if($request->query->getAlnum('category')) {
+            $queryBuilder->where('p.category LIKE :category')
+                ->setParameter('category', '%'.$request->query->getAlnum('category').'%');
         }
 
         $query = $queryBuilder->getQuery();

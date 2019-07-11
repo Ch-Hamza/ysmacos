@@ -21,10 +21,6 @@ class ProductType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
-            ->add('brand', EntityType::class, array(
-                'class' => Brand::class,
-                'choice_label' => 'name',
-            ))
             ->add('category', ChoiceType::class, array(
                 'choices' => array(
                     'T-Shirt' => 'T-Shirt',
@@ -34,6 +30,7 @@ class ProductType extends AbstractType
                 'placeholder' => 'Select',
             ))
             ->add('price', IntegerType::class)
+            ->add('promo', IntegerType::class)
             ->add('description', TextareaType::class)
             ->add('imageFile', VichImageType::class, array(
                 'download_link'     => false,

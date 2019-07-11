@@ -27,6 +27,8 @@ class DefaultController extends Controller
     public function addAction(Request $request)
     {
         $product = new Product();
+        $product->setPromoEnabled(false);
+        $product->setFeatured(false);
         $product->setEnabled(true);
         $form = $this->get('form.factory')->create(ProductType::class, $product);
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
@@ -67,6 +69,38 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $product = $em->getRepository(Product::class)->find($id);
         $product->setEnabled(false);
+        $em->flush();
+        return $this->redirectToRoute('list_products_page');
+    }
+
+    /**
+     * @Route("/admin/products/feature/{id}", name="feature_product_page")
+     */
+    public function featureAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $product = $em->getRepository(Product::class)->find($id);
+        if($product->isFeatured()) {
+            $product->setFeatured(false);
+        } else {
+            $product->setFeatured(true);
+        }
+        $em->flush();
+        return $this->redirectToRoute('list_products_page');
+    }
+
+    /**
+     * @Route("/admin/products/promo/{id}", name="promo_product_page")
+     */
+    public function promoAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $product = $em->getRepository(Product::class)->find($id);
+        if($product->isPromoEnabled()) {
+            $product->setPromoEnabled(false);
+        } else {
+            $product->setPromoEnabled(true);
+        }
         $em->flush();
         return $this->redirectToRoute('list_products_page');
     }

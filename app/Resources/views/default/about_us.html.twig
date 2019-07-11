@@ -8,90 +8,104 @@
     </div>
     <!-- end Scroll to top button -->
 
-    <!-- Home section -->
-    <div class="section-xl bg-image parallax" style="background-image: url('{{ asset('assets/images/business-consulting-bg-new.jpg') }}')">
-        <div class="bg-black-02">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-10 col-md-8 col-lg-7">
-                        <div class="bg-black-07 padding-50">
-                            <h2 class="font-weight-light no-margin">Great things in business are never done by one person. They're done by a team of people.</h2>
-                        </div>
-                    </div>
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </div>
-    </div>
-    <!-- end Home section -->
-
     <!-- About section -->
     <div class="section">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <h5 class="font-weight-light no-margin">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Phasellus viverra nulla ut metus varius laoreet.</h5>
+            <div class="row align-items-center col-spacing-50">
+                <div class="col-12 col-lg-6">
+                    <h3 class="font-weight-light">We believe great things in business are never done by one person. They're done by a team of people.</h3>
+                    <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                    <a class="button button-lg button-rounded button-dark margin-top-30" href="{{ path('contact_page') }}">Get In Touch</a>
                 </div>
-                <div class="col-12 col-md-6">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end About section -->
-
-    <!-- Facts section -->
-    <div class="container text-center">
-        <div class="border-all border-radius padding-50">
-            <div class="row facts-wrapper">
-                <div class="col-12 col-sm-6 col-md-4">
-                    <h2 class="font-weight-light facts-counter">50</h2>
-                    <h6 class="heading-uppercase">Products</h6>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                    <h2 class="font-weight-light facts-counter">74</h2>
-                    <h6 class="heading-uppercase">Brands</h6>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                    <h2 class="font-weight-light facts-counter">300</h2>
-                    <h6 class="heading-uppercase">Happy Clients</h6>
-                </div>
-            </div><!-- end row -->
-        </div>
-    </div><!-- end container -->
-    <!-- end Facts section -->
-
-    <!-- Services section -->
-    <div class="section">
-        <div class="container text-center">
-            <div class="section-title">
-                <h2 class="font-weight-normal">What I Do</h2>
-            </div>
-            <div class="row col-spacing-40">
-                <div class="col-12 col-lg-4 icon-4xl">
-                    <div class="bg-white padding-40 border-radius border-all">
-                        <i class="ti-ruler-pencil text-dark margin-top-10"></i>
-                        <h5 class="font-weight-normal margin-top-20">Graphic Design</h5>
-                        <p class="margin-bottom-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4 icon-4xl">
-                    <div class="bg-white padding-40 border-radius border-all">
-                        <i class="ti-camera text-dark margin-top-10"></i>
-                        <h5 class="font-weight-normal margin-top-20">Photography</h5>
-                        <p class="margin-bottom-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4 icon-4xl">
-                    <div class="bg-white padding-40 border-radius border-all">
-                        <i class="ti-star text-dark margin-top-10"></i>
-                        <h5 class="font-weight-normal margin-top-20">Social Marketing</h5>
-                        <p class="margin-bottom-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                    </div>
+                <div class="col-12 col-lg-6">
+                    <div class="row gallery-wrapper spacing-20">
+                        <div class="col-6 gallery-box">
+                            <div class="gallery-img">
+                                <a href="{{ asset('assets/images/business-creative-about-1.jpg') }}" data-gallery-title="Gallery Image 1">
+                                    <img src="{{ asset('assets/images/business-creative-about-1.jpg') }}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 gallery-box">
+                            <div class="gallery-img">
+                                <a href="{{ asset('assets/images/business-creative-about-2.jpg') }}" data-gallery-title="Gallery Image 2">
+                                    <img src="{{ asset('assets/images/business-creative-about-2.jpg') }}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div><!-- end row/gallery-wrapper -->
                 </div>
             </div><!-- end row -->
         </div><!-- end container -->
     </div>
-    <!-- end Services section -->
+
+    <!-- Services section -->
+    <div class="section bg-grey-lighter">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="font-weight-light">What We Do</h2>
+                <div class="divider-width-50px">
+                    <hr class="bg-black-07">
+                </div>
+            </div>
+            <div class="row col-spacing-40">
+                <div class="col-12 col-md-6 col-lg-4 icon-4xl">
+                    <i class="ti-ruler-pencil text-dark"></i>
+                    <h5 class="font-weight-normal margin-top-20">Graphic Design</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 icon-4xl">
+                    <i class="ti-camera text-dark"></i>
+                    <h5 class="font-weight-normal margin-top-20">Photography</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 icon-4xl">
+                    <i class="ti-star text-dark"></i>
+                    <h5 class="font-weight-normal margin-top-20">Social Marketing</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 icon-4xl">
+                    <i class="ti-mobile text-dark"></i>
+                    <h5 class="font-weight-normal margin-top-20">Mobile App</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 icon-4xl">
+                    <i class="ti-settings text-dark"></i>
+                    <h5 class="font-weight-normal margin-top-20">Web Development</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 icon-4xl">
+                    <i class="ti-comment-alt text-dark"></i>
+                    <h5 class="font-weight-normal margin-top-20">Consulting</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div>
+
+    <!-- Clients section -->
+    <div class="section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2 class="font-weight-light">Our Clients</h2>
+                <div class="divider-width-50px">
+                    <hr class="bg-black-07">
+                </div>
+            </div>
+            <ul class="clients-grid column-5">
+                <li><a href="#"><img src="{{ asset('assets/images/client-1.png') }}" alt=""></a></li>
+                <li><a href="#"><img src="{{ asset('assets/images/client-2.png') }}" alt=""></a></li>
+                <li><a href="#"><img src="{{ asset('assets/images/client-3.png') }}" alt=""></a></li>
+                <li><a href="#"><img src="{{ asset('assets/images/client-4.png') }}" alt=""></a></li>
+                <li><a href="#"><img src="{{ asset('assets/images/client-5.png') }}" alt=""></a></li>
+                <li><a href="#"><img src="{{ asset('assets/images/client-6.png') }}" alt=""></a></li>
+                <li><a href="#"><img src="{{ asset('assets/images/client-7.png') }}" alt=""></a></li>
+                <li><a href="#"><img src="{{ asset('assets/images/client-1.png') }}" alt=""></a></li>
+                <li><a href="#"><img src="{{ asset('assets/images/client-2.png') }}" alt=""></a></li>
+                <li><a href="#"><img src="{{ asset('assets/images/client-3.png') }}" alt=""></a></li>
+            </ul>
+        </div><!-- end container -->
+    </div>
 
     {% include 'default/footer.html.twig' %}
 {% endblock %}

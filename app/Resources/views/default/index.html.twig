@@ -10,80 +10,148 @@
     <!-- end Scroll to top button -->
 
     <!-- Home section -->
-    <div class="section-xl bg-image parallax" style="background-image: url('{{ asset('assets/images/business-consulting-bg-new.jpg') }}')">
-        <div class="bg-black-02">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-10 col-md-8 col-lg-7">
-                        <div class="bg-black-07 padding-50">
-                            <h2 class="font-weight-light no-margin">Great things in business are never done by one person. They're done by a team of people.</h2>
+    <div class="owl-carousel owl-nav-overlay owl-dots-overlay" data-owl-autoplay="true" data-owl-nav="true" data-owl-dots="true" data-owl-items="1">
+        <!-- Slider box 1 -->
+        <div class="bg-image" style="background-image: url({{ asset('assets/images/shop-classic-slider-1.jpg') }})">
+            <div class="section-xl bg-black-05">
+                <div class="container text-center">
+                    <h5 class="font-weight-light margin-bottom-20">New Arrivals For</h5>
+                    <h1>Mens Street Style</h1>
+                    <a class="button button-xl button-reveal-left-outline-white margin-top-20" href="{{ path('index_products_page') }}"><i class="ti-shopping-cart"></i><span>Shop now</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- Slider box 2 -->
+        <div class="bg-image" style="background-image: url({{ asset('assets/images/shop-classic-slider-2.jpg') }})">
+            <div class="section-xl bg-black-05">
+                <div class="container text-center">
+                    <h5 class="font-weight-light margin-bottom-20">New Arrivals For</h5>
+                    <h1>Mens Street Style</h1>
+                    <a class="button button-xl button-reveal-left-outline-white margin-top-20" href="{{ path('index_products_page') }}"><i class="ti-shopping-cart"></i><span>Shop Now</span></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end owl-carousel -->
+    <!-- end Home section -->
+
+    <!-- Products section -->
+    <div class="section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Featured Products</h3>
+            </div>
+            <div class="row product-wrapper">
+                <!-- Product box 1 -->
+                {% for p in products %}
+                <div class="col-12 col-md-6 col-lg-4 product">
+                    <div class="product-img">
+                        <a href="{{ path('product_details_page', {'id': p.id}) }}">
+                            <img src="{{ vich_uploader_asset(p,'imageFile') }}" alt="">
+                            {% if p.promoEnabled %}
+                            <div class="product-sale">
+                                <h6 class="heading-uppercase">-{{ p.promo }}%</h6>
+                            </div>
+                            {% endif %}
+                            <!--div class="product-new">
+                                <span class="heading-uppercase">New</span>
+                            </div-->
+                        </a>
+                        <div class="product-img-hover">
+                            <h6 class="heading-uppercase"><a href="{{ path('add_to_cart_page', {'id': p.id}) }}">Add to Cart</a></h6>
                         </div>
-                    </div>
-                </div><!-- end row -->
+                    </div><!-- end product-img -->
+                    <div class="product-info">
+                        <h6><a href="{{ path('product_details_page', {'id': p.id}) }}">{{ p.name }}</a></h6>
+                        <!-- Product Category -->
+                        <ul class="list-horizontal">
+                            <li><a href="{{ path('index_products_page') }}?category={{ p.category }}">{{ p.category }}</a></li>
+                        </ul>
+                        <!-- Product Price -->
+                        <div class="product-price">
+                            {% if p.promoEnabled %}
+                                {% set value = p.price - p.promo*p.price*0.01 %}
+                                <h6><span>{{ p.price }} DT</span>{{ value }} DT</h6>
+                            {% else %}
+                                <h6>{{ p.price }} DT</h6>
+                            {% endif %}
+                        </div>
+                        <!-- Product Rating -->
+                        <div class="product-rating">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                        </div>
+                    </div><!-- end product-info -->
+                </div>
+                {% endfor %}
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div>
+    <!-- end Products section -->
+
+    <!-- section -->
+    <div class="section-lg bg-image parallax" style="background-image: url({{ asset('assets/images/shop-classic-parallax.jpg') }})">
+        <div class="bg-black-06">
+            <div class="container text-right">
+                <h1 class="font-weight-thin">New arrivals are here</h1>
+                <a class="button button-xl button-fill-right-outline-white margin-top-30" href="{{ path('index_products_page') }}">Shop Now</a>
             </div><!-- end container -->
         </div>
     </div>
-    <!-- end Home section -->
+    <!-- end section -->
 
-    <!-- Services section -->
-    <div class="section bg-grey-lightest">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-4 icon-5xl">
-                    <i class="ti-comment-alt text-dark"></i>
-                    <h5 class="font-weight-normal margin-top-20">Business Consultent</h5>
-                    <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
-                </div>
-                <div class="col-12 col-md-4 icon-5xl">
-                    <i class="ti-settings text-dark"></i>
-                    <h5 class="font-weight-normal margin-top-20">Factory Consultent</h5>
-                    <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
-                </div>
-                <div class="col-12 col-md-4 icon-5xl">
-                    <i class="ti-blackboard text-dark"></i>
-                    <h5 class="font-weight-normal margin-top-20">Strategy &amp; Planning</h5>
-                    <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
-                </div>
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div>
-    <!-- end Services section -->
-
-    <!-- About section -->
+    <!-- Product Categories -->
     <div class="section">
         <div class="container">
-            <div class="row col-spacing-50 align-items-center">
-                <div class="col-12 col-lg-6">
-                    <img src="{{ asset('assets/images/business-consulting-about.jpg') }}" alt="">
-                </div>
-                <div class="col-12 col-lg-6">
-                    <h2 class="font-weight-light">We Are Mono</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                    <!--a class="button button-lg button-radius button-reveal-left-dark margin-top-30" href="#"><i class="ti-arrow-right"></i><span>More About Us</span></a-->
-                </div>
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div>
-    <!-- end About section -->
-
-    <!-- Clients section -->
-    <div class="section bg-dark-lightest">
-        <div class="container">
             <div class="section-title text-center">
-                <h2 class="font-weight-light">Our Amazing Brands</h2>
+                <h3>Browse Our Categories</h3>
             </div>
-            <ul class="clients-grid column-5">
-                {% for b in brands %}
-                    <li><a href="{{ path('index_products_page') }}?brand={{ b.name }}"><img src="{{ vich_uploader_asset(b,'imageFile') }}" alt=""></a></li>
-                {% endfor %}
-            </ul>
+            <div class="owl-carousel" data-owl-nav="true" data-owl-dots="false" data-owl-margin="30" data-owl-xs="1" data-owl-sm="2" data-owl-md="2" data-owl-lg="2" data-owl-xl="2">
+                <div class="hoverbox-8">
+                    <a href="{{ path('index_products_page') }}?category=jackets">
+                        <img src="{{ asset('assets/images/shop-category-jackets.jpg') }}" alt="">
+                        <div class="content">
+                            <h6 class="heading-uppercase no-margin">Jackets</h6>
+                        </div>
+                    </a>
+                </div>
+                <div class="hoverbox-8">
+                    <a href="{{ path('index_products_page') }}?category=shirts">
+                        <img src="{{ asset('assets/images/shop-category-shirts.jpg') }}" alt="">
+                        <div class="content">
+                            <h6 class="heading-uppercase no-margin">Shirts</h6>
+                        </div>
+                    </a>
+                </div>
+                <div class="hoverbox-8">
+                    <a href="{{ path('index_products_page') }}?category=shoes">
+                        <img src="{{ asset('assets/images/shop-category-shoes.jpg') }}" alt="">
+                        <div class="content">
+                            <h6 class="heading-uppercase no-margin">Shoes</h6>
+                        </div>
+                    </a>
+                </div>
+                <div class="hoverbox-8">
+                    <a href="{{ path('index_products_page') }}?category=bags">
+                        <img src="{{ asset('assets/images/shop-category-bags.jpg') }}" alt="">
+                        <div class="content">
+                            <h6 class="heading-uppercase no-margin">Bags</h6>
+                        </div>
+                    </a>
+                </div>
+            </div><!-- end owl-carousel -->
         </div><!-- end container -->
     </div>
-    <!-- end Clients section -->
+    <!-- end Product Categories -->
 
     <!-- Contact section -->
     <div class="section">
         <div class="container">
+            <div class="section-title text-center">
+                <h3>Contact us</h3>
+            </div>
             <div class="row">
                 <div class="col-12 col-md-4">
                     <div class="margin-bottom-30">

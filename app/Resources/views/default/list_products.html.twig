@@ -15,11 +15,11 @@
 
     <!-- Products section -->
     <div class="section">
-        {% if(app.request.get('brand')) %}
+        {% if(app.request.get('category')) %}
         <div class="container pb-5 mb-5">
-            <div class="text-center"><h4>{{ products[0].brand.name }}</h4></div>
+            <div class="text-center"><h4>{{ products[0].category }}</h4></div>
             <div class="row justify-content-center justify-text">
-                {{ products[0].brand.description }}
+                {{ products[0].category }}
             </div>
         </div>
         {% endif %}
@@ -58,6 +58,11 @@
                         <div class="product-img">
                             <a href="{{ path('product_details_page', {'id': p.id}) }}">
                                 <img src="{{ vich_uploader_asset(p,'imageFile') }}" alt="">
+                                {% if p.promoEnabled %}
+                                    <div class="product-sale">
+                                        <h6 class="heading-uppercase">-{{ p.promo }}%</h6>
+                                    </div>
+                                {% endif %}
                             </a>
                             <div class="product-img-hover">
                                 <form action="{{ path('add_to_cart_page', {'id': p.id}) }}" method="post">
@@ -77,7 +82,12 @@
                             </ul>
                             <!-- Product Price -->
                             <div class="product-price">
-                                <h6>{{ p.price }} DT</h6>
+                                {% if p.promoEnabled %}
+                                    {% set value = p.price - p.promo*p.price*0.01 %}
+                                    <h6><span>{{ p.price }} DT</span>{{ value }} DT</h6>
+                                {% else %}
+                                    <h6>{{ p.price }} DT</h6>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

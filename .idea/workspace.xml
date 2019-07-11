@@ -3,6 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="ba0aa3af-7c69-477a-b9bb-79b22fca1431" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/admin/products/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/admin/products/list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/about_us.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/default/about_us.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/list_products.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/default/list_products.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/symfony_requirements" beforeDir="false" afterPath="$PROJECT_DIR$/bin/symfony_requirements" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProductBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductBundle/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProductBundle/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductBundle/Entity/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProductBundle/Form/ProductType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductBundle/Form/ProductType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/config.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,59 +23,76 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/index.html.twig">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/default/list_products.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1656">
-              <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+            <state relative-caret-position="340">
+              <caret line="90" column="34" lean-forward="true" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DefaultController.php">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="75" column="39" selection-start-line="70" selection-start-column="28" selection-end-line="75" selection-end-column="39" />
+              <folding>
+                <element signature="e#554#627#0#HTML" expanded="true" />
+                <element signature="e#1145#1218#0#HTML" expanded="true" />
+                <element signature="e#14053#14126#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
-              <caret line="21" column="95" selection-start-line="21" selection-start-column="95" selection-end-line="21" selection-end-column="95" />
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/Views/Security/login.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/ProductBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+            <state relative-caret-position="192">
+              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/commandes/list.html.twig">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/products/list.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3120">
-              <caret line="130" column="111" selection-start-line="130" selection-start-column="79" selection-end-line="130" selection-end-column="111" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="99" column="87" selection-start-line="99" selection-start-column="87" selection-end-line="99" selection-end-column="87" />
+            <state relative-caret-position="298">
+              <caret line="56" column="179" selection-start-line="56" selection-start-column="179" selection-end-line="56" selection-end-column="179" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/devis/list.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/ProductBundle/Entity/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3000">
-              <caret line="125" column="115" selection-start-line="125" selection-start-column="83" selection-end-line="125" selection-end-column="115" />
+            <state relative-caret-position="-52">
+              <caret line="277" column="34" selection-start-line="277" selection-start-column="22" selection-end-line="277" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProductBundle/Form/ProductType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -73,9 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>emaim</find>
-      <find>INVOICE</find>
-      <find>{#</find>
       <find>dt</find>
       <find>logo</find>
       <find>fluid</find>
@@ -95,7 +120,6 @@
       <find>commandeitemedittype</find>
       <find>more</find>
       <find>CommandeItemEditTypeClient</find>
-      <find>brand</find>
       <find>prix_total</find>
       <find>OrderItem</find>
       <find>pri</find>
@@ -103,6 +127,10 @@
       <find>issued</find>
       <find>sum1</find>
       <find>item.quantity*item.product.price</find>
+      <find>ispor</find>
+      <find>brand</find>
+      <find>price</find>
+      <find>prom</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -111,7 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/assets/recipe.css" />
         <option value="$PROJECT_DIR$/app/Resources/views/default/detail_recipe.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/admin/recipe/list.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/default/list_recipes.html.twig" />
@@ -128,10 +155,7 @@
         <option value="$PROJECT_DIR$/app/Resources/views/default/footer.html.twig" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/default/page-header.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/admin/products/list.html.twig" />
-        <option value="$PROJECT_DIR$/src/ProductBundle/Form/ProductType.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/ProductBundle/Entity/Product.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/3.url" />
         <option value="$PROJECT_DIR$/app/Resources/views/default/contact.html.twig" />
         <option value="$PROJECT_DIR$/src/OrderBundle/Entity/OrderInfo.php" />
@@ -145,23 +169,27 @@
         <option value="$PROJECT_DIR$/src/OrderBundle/Form/CommandeItemEditTypeClient1.php" />
         <option value="$PROJECT_DIR$/src/OrderBundle/Form/CommandeItemEditTypeClient.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/OrderBundle/Form/ProductEntityType.php" />
         <option value="$PROJECT_DIR$/src/OrderBundle/Entity/OrderItem.php" />
         <option value="$PROJECT_DIR$/src/OrderBundle/Form/FullCommande.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/admin/commandes/add.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/default/header.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/default/about_us.html.twig" />
         <option value="$PROJECT_DIR$/src/ProductBundle/Entity/Brand.php" />
         <option value="$PROJECT_DIR$/web/assets/css/app.min.css" />
-        <option value="$PROJECT_DIR$/app/Resources/views/default/list_products.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/admin/index.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/OrderBundle/Repository/OrderItemRepository.php" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/Views/Security/login.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/admin/devis/list.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/admin/commandes/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/ProductBundle/Entity/Product.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/about_us.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/ProductBundle/Form/ProductType.php" />
+        <option value="$PROJECT_DIR$/src/ProductBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/admin/products/list.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/list_products.html.twig" />
       </list>
     </option>
   </component>
@@ -240,114 +268,107 @@
         <subPane>
           <expand>
             <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="FOSUserBundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="commandes" type="462c0819:PsiDirectoryNode" />
+              <item name="products" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="devis" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="OrderBundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="OrderBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ProductBundle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ProductBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ProductBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="brands" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brands" type="462c0819:PsiDirectoryNode" />
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ProductBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ysmacos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ysmacos" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -358,7 +379,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../proj_lab" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -454,11 +475,12 @@
       <workItem from="1556336258263" duration="475000" />
       <workItem from="1556368464847" duration="598000" />
       <workItem from="1556494782300" duration="117000" />
+      <workItem from="1562500387964" duration="9079000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="235140000" />
+    <option name="totallyTimeSpent" value="244219000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -471,8 +493,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2753404" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27987897" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -481,9 +504,9 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32885906" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32820514" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32885906" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32991454" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32991454" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
@@ -497,9 +520,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Form/UserType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/products/add.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -510,13 +530,6 @@
     <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/products/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/products/list.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/default/page-header.html.twig">
@@ -531,13 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProductBundle/Form/ProductType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -596,7 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="34" column="60" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -671,27 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/about_us.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="53" column="52" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1728">
-          <caret line="72" column="63" selection-start-line="72" selection-start-column="58" selection-end-line="72" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/list_products.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/assets/css/app.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
@@ -710,13 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="365" selection-start-line="365" selection-end-line="365" />
         </state>
       </provider>
     </entry>
@@ -748,13 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProductBundle/Entity/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1001">
-          <caret line="80" column="85" selection-start-line="80" selection-start-column="85" selection-end-line="80" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -775,10 +745,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/devis/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1656">
-          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+        <state relative-caret-position="3000">
+          <caret line="125" column="115" selection-start-line="125" selection-start-column="83" selection-end-line="125" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2376">
+          <caret line="99" column="87" selection-start-line="99" selection-start-column="87" selection-end-line="99" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/commandes/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="130" column="111" selection-start-line="130" selection-start-column="79" selection-end-line="130" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/Views/Security/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -789,34 +780,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/Views/Security/login.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        <state relative-caret-position="476">
+          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/about_us.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="104" column="73" selection-start-line="104" selection-start-column="73" selection-end-line="104" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProductBundle/Entity/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52">
+          <caret line="277" column="34" selection-start-line="277" selection-start-column="22" selection-end-line="277" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProductBundle/Form/ProductType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProductBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/products/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="56" column="179" selection-start-line="56" selection-start-column="179" selection-end-line="56" selection-end-column="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="75" column="39" selection-start-line="70" selection-start-column="28" selection-end-line="75" selection-end-column="39" />
           <folding>
-            <element signature="e#1882#1905#0#Twig" expanded="true" />
+            <element signature="e#554#627#0#HTML" expanded="true" />
+            <element signature="e#1145#1218#0#HTML" expanded="true" />
+            <element signature="e#14053#14126#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/commandes/list.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/list_products.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3120">
-          <caret line="130" column="111" selection-start-line="130" selection-start-column="79" selection-end-line="130" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/devis/list.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3000">
-          <caret line="125" column="115" selection-start-line="125" selection-start-column="83" selection-end-line="125" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="99" column="87" selection-start-line="99" selection-start-column="87" selection-end-line="99" selection-end-column="87" />
+        <state relative-caret-position="340">
+          <caret line="90" column="34" lean-forward="true" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
         </state>
       </provider>
     </entry>

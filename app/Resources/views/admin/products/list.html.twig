@@ -53,6 +53,8 @@
                                 <td><img src="{{ vich_uploader_asset(p,'imageFile') }}" alt="" style="width: 150px;height: 150px;"></td>
                                 <td>
                                     <ul class="icons-list mt-15">
+                                        <li><a href="{{ path('promo_product_page', {'id': p.id}) }}" data-popup="tooltip" title="Activate Promo Product"><i class="icon-paperplane"></i></a></li>
+                                        <li><a href="{{ path('feature_product_page', {'id': p.id}) }}" data-popup="tooltip" title="Feature Product"><i class="icon-checkbox-checked"></i></a></li>
                                         <li><a href="{{ path('edit_products_page', {'id': p.id}) }}" data-popup="tooltip" title="Edit Product"><i class="icon-pencil5"></i></a></li>
                                         <li><a href="{{ path('delete_product_page', {'id': p.id}) }}" data-popup="tooltip" title="Delete Product" onclick="return confirm('Are you sure you want to Delete this Product?')"><i class="icon-trash"></i></a></li>
                                     </ul>
